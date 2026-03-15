@@ -93,3 +93,36 @@ a {
     color: #666;
     font-size: 0.9em;
 }
+
+.icon-links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #222;
+    width: fit-content;
+}
+
+.icon-link:hover {
+    color: #0056b3;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    line-height: 1;
+}
