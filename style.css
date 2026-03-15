@@ -127,8 +127,12 @@ a {
     line-height: 1;
 }
 
-.news-photo{
-    margin-top:10px;
-    max-width:420px;
-    border-radius:6px;
+.news-photo {
+    display: block;
+    margin-top: 10px;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
 }
