@@ -129,10 +129,15 @@ a {
     line-height: 1;
 }
 
+
+.news-item {
+    margin-bottom: 28px;
+}
+
 .news-photo {
     display: block;
     margin-top: 10px;
-    max-width: 420px;
+    max-width: 480px;
     width: 100%;
     height: auto;
     border-radius: 6px;
