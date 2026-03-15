@@ -126,3 +126,9 @@ a {
     border-radius: 50%;
     line-height: 1;
 }
+
+.news-photo{
+    margin-top:10px;
+    max-width:420px;
+    border-radius:6px;
+}
