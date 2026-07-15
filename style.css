@@ -1,159 +1,313 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    color: #222;
-    background-color: #ffffff;
+/* ============================================================
+   Beijun Shen — academic website
+   Design system: serif headings + clean sans body,
+   restrained academic-blue accent, light/dark aware, print-friendly.
+   ============================================================ */
+
+:root {
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+             Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+            Arial, "Noto Sans", sans-serif;
+
+    --bg: #ffffff;
+    --surface: #f6f8fb;
+    --text: #1b1f24;
+    --muted: #5b6673;
+    --heading: #14233b;
+    --accent: #1a4d8f;
+    --accent-soft: #eaf1fa;
+    --border: #e4e8ee;
+
+    --maxw: 900px;
+    --radius: 8px;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #14171c;
+        --surface: #1b1f26;
+        --text: #e7e9ec;
+        --muted: #9aa4b2;
+        --heading: #eef1f5;
+        --accent: #78add8;
+        --accent-soft: #1e2836;
+        --border: #2a303a;
+    }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    font-family: var(--sans);
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 22px 64px;
+    line-height: 1.65;
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Headings ---------- */
 h1, h2, h3 {
-    color: #111;
+    font-family: var(--serif);
+    color: var(--heading);
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 h1 {
-    margin-bottom: 0.2em;
+    font-size: 2.15rem;
+    margin: 0 0 0.15em;
+    letter-spacing: -0.01em;
 }
 
-nav {
-    margin-bottom: 30px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #ddd;
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.6em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border);
 }
 
-nav a {
-    margin-right: 18px;
-    text-decoration: none;
-    color: #0056b3;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.section {
-    margin-top: 35px;
-}
-
-.subtitle {
-    font-size: 1.1em;
-    color: #444;
-}
-
-.note {
-    color: #666;
-    font-size: 0.95em;
-}
-
-ul {
-    padding-left: 22px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
+/* ---------- Links ---------- */
 a {
-    color: #0056b3;
+    color: var(--accent);
+    text-decoration: none;
 }
 
+a:hover { text-decoration: underline; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(180%) blur(8px);
+    -webkit-backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--border);
+    margin: 0 -22px 34px;
+    padding: 0 22px;
+}
+
+.nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    padding: 13px 0;
+}
+
+.brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--heading);
+    letter-spacing: -0.01em;
+}
+.brand:hover { text-decoration: none; color: var(--accent); }
+
+nav.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+nav.menu a {
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.98rem;
+    padding: 5px 11px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav.menu a:hover {
+    text-decoration: none;
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+nav.menu a.active {
+    color: var(--accent);
+    background: var(--accent-soft);
+    font-weight: 600;
+}
+
+/* ---------- Profile / hero ---------- */
 .container {
     display: flex;
-    gap: 30px;
+    gap: 38px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .profile-text {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
+}
+
+.subtitle {
+    font-size: 1.12rem;
+    color: var(--muted);
+    margin-top: 0.1em;
 }
 
 .profile-photo {
-    width: 220px;
+    width: 230px;
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 22px rgba(20, 35, 59, 0.10);
 }
 
-.project {
-    margin-bottom: 24px;
-}
-
-.project-title {
-    font-weight: bold;
-    font-size: 1.05em;
-}
-
-.footer {
-    margin-top: 50px;
-    padding-top: 12px;
-    border-top: 1px solid #ddd;
-    color: #666;
-    font-size: 0.9em;
-}
-
+/* ---------- Icon / contact links ---------- */
 .icon-links {
-    margin-top: 18px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
 }
 
 .icon-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #222;
+    gap: 11px;
+    color: var(--text);
     width: fit-content;
+    font-size: 0.98rem;
 }
 
-.icon-link:hover {
-    color: #0056b3;
-}
+.icon-link:hover { color: var(--accent); text-decoration: none; }
 
 .icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 22px;
-    height: 22px;
-    font-size: 14px;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
     font-weight: 600;
-    border: 1px solid #bbb;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
     border-radius: 50%;
     line-height: 1;
+    flex-shrink: 0;
 }
 
+/* ---------- Sections ---------- */
+.section { margin-top: 44px; }
 
+ul { padding-left: 20px; }
+li { margin-bottom: 9px; }
+
+/* ---------- Research page project cards ---------- */
+.project {
+    margin-bottom: 0;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+}
+.section.project { margin-top: 18px; }
+
+.project-title {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.12rem;
+    color: var(--heading);
+    margin-bottom: 4px;
+}
+.project p { margin: 0; }
+
+/* ---------- Publications ---------- */
+.pub-list { list-style: none; padding-left: 0; }
+
+.pub-list li {
+    margin-bottom: 16px;
+    padding-left: 16px;
+    border-left: 2px solid var(--border);
+}
+
+.pub-list a { color: var(--accent); }
+.note { color: var(--muted); font-size: 0.92em; }
+
+/* Author-role legend at the top of the Publications page — full-strength text
+   (not muted), so "Corresponding author" / "Equal contribution" read clearly. */
+.pub-legend {
+    color: var(--text);
+    font-size: 0.92em;
+    margin-top: -0.2em;
+}
+
+/* Author-role markers (* corresponding, + equal contribution): bold, slightly larger,
+   and high-contrast so they clearly draw attention, even inside the muted legend line.
+   Uses --heading so it stays near-black in light mode and near-white in dark mode. */
+sup {
+    color: var(--heading);
+    font-weight: 800;
+    font-size: 0.9em;
+    padding-left: 1px;
+}
+
+/* ---------- News ---------- */
 .news-item {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--border);
 }
+.news-item:last-of-type { border-bottom: none; }
+.news-item p { margin: 0; }
 
 .news-photo {
     display: block;
-    margin-top: 10px;
+    margin-top: 14px;
     max-width: 480px;
     width: 100%;
     height: auto;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
 }
 
-
-.pub-list li {
-    margin-bottom: 18px;
+/* ---------- Footer ---------- */
+.footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.88rem;
 }
 
-.pub-list a {
-    color: #0056b3;
-    text-decoration: none;
+/* ---------- Responsive ---------- */
+@media (max-width: 620px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.85rem; }
+    h2 { font-size: 1.35rem; }
+    .container { gap: 24px; }
+    .profile-photo {
+        width: 100%;
+        max-width: 300px;
+        order: -1;
+        margin: 0 auto;
+    }
+    .brand { font-size: 1.05rem; }
 }
 
-.pub-list a:hover {
-    text-decoration: underline;
+/* ---------- Print ---------- */
+@media print {
+    .site-header { position: static; border: none; margin: 0 0 20px; }
+    nav.menu { display: none; }
+    body { color: #000; max-width: none; font-size: 12pt; }
+    a { color: #000; text-decoration: underline; }
+    .project, .pub-list li, .news-item { break-inside: avoid; }
 }
