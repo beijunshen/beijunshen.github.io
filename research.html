@@ -1,97 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Research | Beijun Shen</title>
-    <meta name="description" content="Research of Beijun Shen on the mechanics and design of soft material systems — architected soft materials, liquid crystal elastomers, multimaterial and graded polymers, and constitutive modeling.">
+    <meta name="description" content="Beijun Shen, Postdoctoral Research Scientist in Mechanical Engineering at Columbia University: mechanics of polymeric materials and structures, constitutive modeling, structural design, and advanced manufacturing.">
     <meta name="author" content="Beijun Shen">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Open Graph / social preview -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Research | Beijun Shen">
-    <meta property="og:description" content="Research of Beijun Shen on the mechanics and design of soft material systems.">
+    <meta property="og:description" content="Beijun Shen, Postdoctoral Research Scientist in Mechanical Engineering at Columbia University: mechanics of polymeric materials and structures, constitutive modeling, structural design, and advanced manufacturing.">
     <meta property="og:image" content="https://beijunshen.github.io/images/photo.jpeg">
     <meta property="og:url" content="https://beijunshen.github.io/research.html">
     <meta name="twitter:card" content="summary">
-
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3H5852EJ4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-M3H5852EJ4');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M3H5852EJ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-M3H5852EJ4');
+</script>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="nav-inner">
+<header class="topbar">
+    <div class="topbar-inner">
         <a class="brand" href="index.html">Beijun Shen</a>
         <nav class="menu">
             <a href="index.html">Home</a>
+            <a href="research.html" class="active">Research</a>
             <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
             <a href="news.html">News</a>
         </nav>
     </div>
 </header>
 
+<div class="layout">
+<aside class="sidebar">
+    <img src="images/photo.jpeg" alt="Beijun Shen" class="avatar">
+    <div class="who">
+        <div class="name">Beijun Shen</div>
+        <div class="role">Postdoctoral Research Scientist<br>Mechanical Engineering<br>Columbia University</div>
+    </div>
+    <p class="tagline">Mechanics of polymeric materials and structures</p>
+    <ul class="contact">
+        <li><span class="ico" aria-hidden="true">&#9993;</span><a href="mailto:bs3660@columbia.edu">bs3660@columbia.edu</a></li>
+        <li><span class="ico" aria-hidden="true">&#9679;</span><a href="https://scholar.google.com/citations?user=DdyhCMUAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+        <li><span class="ico" aria-hidden="true">&#9679;</span><a href="https://orcid.org/0009-0008-6985-1547" target="_blank" rel="noopener noreferrer">ORCID</a></li>
+        <li><span class="ico" aria-hidden="true">&#9679;</span><a href="https://www.linkedin.com/in/beijun-shen-136708172/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><span class="ico" aria-hidden="true">&#9679;</span>New York, NY</li>
+    </ul>
+</aside>
+
+<main class="content">
+<section>
 <h1>Research</h1>
-
 <p>
-My research focuses on the mechanics and design of soft material systems across multiple length scales,
-with an emphasis on large deformation, rate dependence, instability, architecture, and material gradients.
+Polymeric materials and structures are everywhere in engineering, from protective equipment to aircraft, medical devices,
+and soft robots. Their response is large, nonlinear, and dissipative; it changes with rate, temperature, and load history,
+and it is set by microstructure and by the structure built from them. Yet constitutive modeling still largely works
+<em>one model for one material</em>. My research asks whether the mechanical response of polymeric materials and structures
+can be predicted before they are made, from a few measurable microstructural variables and the deformation mechanisms
+polymers share. Three areas pursue that question together, and they converge on a predictive digital twin of polymeric
+materials and structures.
 </p>
+</section>
 
-<div class="section project">
-    <div class="project-title">1. Architected soft materials</div>
-    <p>
-        I study how material constitutive behavior interacts with structural geometry to control
-        stiffness, instability, energy dissipation, and recoverability in soft architected systems.
-    </p>
+<section class="thrust">
+<h2>Constitutive discovery for polymer families</h2>
+<p>
+Multimaterial PolyJet printing mixes a rubbery and a glassy photopolymer voxel by voxel into a continuous family of
+polymers, rubbery to glassy. Each mixture used to be treated as its own material. I established a
+<strong>time&ndash;temperature&ndash;composition equivalence</strong> for this family: temperature and frequency translate the
+glass transition, composition translates and broadens it, and the storage modulus of every composition collapses onto one
+master curve. On that basis I built a single finite-strain constitutive framework for the entire family, an equilibrium
+network with rate-dependent reptational, intermolecular, and glassy mechanisms connected by composition scaling laws. It
+captures the nonlinear, rate-dependent response of every calibrated composition and <strong>predicts a mixture withheld
+from calibration</strong>: one model for an entire material family, with composition a continuous design variable.
+</p>
+<div class="figrow">
+    <figure>
+        <img src="images/research/ttce_concept.jpg" alt="Schematic of time-temperature-composition equivalence" loading="lazy">
+        <figcaption>Time&ndash;temperature&ndash;composition equivalence of the glass transition in one printed polymer family.
+        <a href="https://doi.org/10.48550/arXiv.2610.14986" target="_blank" rel="noopener noreferrer">arXiv:2610.14986</a></figcaption>
+    </figure>
+    <figure>
+        <img src="images/research/framework_prediction.jpg" alt="Predicted versus measured response of a withheld composition" loading="lazy">
+        <figcaption>Prediction of a composition withheld from calibration, at four strain rates.
+        <a href="https://doi.org/10.48550/arXiv.2609.04399" target="_blank" rel="noopener noreferrer">arXiv:2609.04399</a></figcaption>
+    </figure>
 </div>
+<p class="next"><strong>Next:</strong> discovering the constitutive laws of polymer families from data, with machine learning
+that selects among physical mechanisms rather than fitting a black box.</p>
+</section>
 
-<div class="section project">
-    <div class="project-title">2. Liquid crystal elastomers</div>
-    <p>
-        My work on liquid crystal elastomer systems explores how viscoelastic response, soft elasticity,
-        and structural mechanisms such as snap-through can be coupled to achieve enhanced energy absorption
-        and programmable mechanical behavior.
-    </p>
+<section class="thrust">
+<h2>Structural design for energy absorption</h2>
+<p>
+Helmets and armor need materials that absorb more energy the faster they are loaded and recover for reuse. During my Ph.D.
+I coupled architected lattices, which trap energy by buckling, with liquid crystal elastomers, which dissipate through
+viscoelasticity and a rate-dependent soft stress. In a bistable lattice, energy absorption rose over two orders of
+magnitude with strain rate, and my simulations showed that viscoelasticity makes stacked layers buckle nonuniformly,
+adding dissipation that grows with layer count, graded beam thickness, and strain rate. Adding a stretchable elastomer
+bar that competes with beam buckling, I found the thickness ratio at which the lattice absorbs up to
+<strong>2.5 times the energy of a rigid-bar design</strong>: bending and stretching members can be activated in sequence
+by tuning geometry and material.
+</p>
+<div class="figrow">
+    <figure>
+        <img src="images/research/lce_lattice_photos.jpg" alt="Liquid crystal elastomer lattice under compression and simulated unit cell" loading="lazy">
+        <figcaption>A lattice with a stretchable liquid crystal elastomer bar under load and unload, experiment and simulation.
+        <a href="https://doi.org/10.1016/j.jmps.2025.106497" target="_blank" rel="noopener noreferrer">J. Mech. Phys. Solids (2026)</a></figcaption>
+    </figure>
+    <figure>
+        <img src="images/research/lce_design_map.jpg" alt="Design map for energy dissipation modes in LCE-based architected materials" loading="lazy">
+        <figcaption>Design map: the bar-to-beam thickness ratio selects the dissipation mode.
+        See also <a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Adv. Mater. (2022)</a></figcaption>
+    </figure>
 </div>
+<p class="next"><strong>Next:</strong> designing material and geometry together, so that structures respond on the time
+scales they meet, from impact protection to deployable structures.</p>
+</section>
 
-<div class="section project">
-    <div class="project-title">3. Multimaterial polymer systems</div>
-    <p>
-        I investigate multimaterial and composition-dependent polymer systems, including digitally mixed
-        soft materials and heterogeneous structures, with the goal of building predictive constitutive
-        frameworks that span elastomeric to glassy response.
-    </p>
-</div>
+<section class="thrust">
+<h2>Processing and mechanics of recycled polymers</h2>
+<p>
+Polyolefins are held back from recycling because post-consumer feedstocks vary and carry contaminants, chiefly
+polyethylene, that degrade mechanical performance. I led a mechanistic study of films extruded from post-consumer
+polypropylene, quantifying their polyethylene by calorimetry. Extrusion draws the polyethylene into elongated striations,
+and by microscopy, rheometry, tensile tests, and scattering I showed that <strong>these striations, not crystalline
+orientation, govern anisotropic failure</strong>. Splitting and restacking the melt refined the striations, doubled
+transverse ductility, and restored the performance of virgin material with the same polyethylene content.
+</p>
+<figure class="wide">
+    <img src="images/research/pp_striations.jpg" alt="Electron micrographs of polyethylene striations in recycled polypropylene film" loading="lazy">
+    <figcaption>Polyethylene striations in a recycled polypropylene film, along and across the machine direction.
+    <a href="https://doi.org/10.1002/pen.70353" target="_blank" rel="noopener noreferrer">Polym. Eng. Sci. (2026)</a></figcaption>
+</figure>
+<p class="next"><strong>Next:</strong> predicting the stiffness, strength, and ductility of recycled and aged polymers from
+a few measurements of their microstructure.</p>
+</section>
 
-<div class="section project">
-    <div class="project-title">4. Graded soft materials and bio-inspired design</div>
-    <p>
-        I am interested in spatially graded soft structures inspired by biological systems,
-        where gradients in material properties and geometry can be used to control load transfer,
-        energy dissipation, and damage resistance.
-    </p>
-</div>
-
-<div class="section project">
-    <div class="project-title">5. Constitutive modeling and computational mechanics</div>
-    <p>
-        A central component of my research is constitutive modeling and computational implementation,
-        including finite-strain viscoelastic and viscoplastic formulations, Abaqus UMAT development,
-        and simulation-guided design of soft material systems.
-    </p>
-</div>
-
-<div class="footer">
-    Last updated: July 2026
+<footer class="footer">Last updated: October 2026</footer>
+</main>
 </div>
 
 </body>
