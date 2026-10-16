@@ -88,5 +88,18 @@
 </main>
 </div>
 
+<div class="lightbox" id="lightbox" hidden><img alt=""><span class="lb-close" aria-hidden="true">&times;</span></div>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox'), img = lb.querySelector('img');
+  document.querySelectorAll('.content figure img').forEach(function (el) {
+    el.classList.add('zoomable');
+    el.addEventListener('click', function () { img.src = el.src; img.alt = el.alt; lb.hidden = false; });
+  });
+  lb.addEventListener('click', function () { lb.hidden = true; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.hidden = true; });
+})();
+</script>
+
 </body>
 </html>

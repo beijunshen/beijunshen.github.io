@@ -89,16 +89,6 @@ computation as a way of thinking that is checked against theory and experiment.
 </section>
 
 <section>
-<h2>Courses I Am Prepared to Teach</h2>
-<ul>
-    <li><strong>Undergraduate:</strong> statics, dynamics, mechanics of materials, materials selection</li>
-    <li><strong>Graduate:</strong> solid mechanics, continuum mechanics, finite element analysis, mechanics of polymers and composites</li>
-    <li><strong>New courses:</strong> <em>Digital Twins of Materials: Constitutive Discovery, Simulation, and Design</em>;
-        <em>Multimaterial Additive Manufacturing and Architected Materials</em> (project-based)</li>
-</ul>
-</section>
-
-<section>
 <h2>Mentoring</h2>
 <ul class="entries">
     <li><div class="entry-head"><span><strong>Xiaolei Ye</strong>, M.S. student, Columbia University</span><span class="when">2026&ndash;present</span></div>
@@ -115,6 +105,19 @@ computation as a way of thinking that is checked against theory and experiment.
 <footer class="footer">Last updated: October 2026</footer>
 </main>
 </div>
+
+<div class="lightbox" id="lightbox" hidden><img alt=""><span class="lb-close" aria-hidden="true">&times;</span></div>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox'), img = lb.querySelector('img');
+  document.querySelectorAll('.content figure img').forEach(function (el) {
+    el.classList.add('zoomable');
+    el.addEventListener('click', function () { img.src = el.src; img.alt = el.alt; lb.hidden = false; });
+  });
+  lb.addEventListener('click', function () { lb.hidden = true; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.hidden = true; });
+})();
+</script>
 
 </body>
 </html>
