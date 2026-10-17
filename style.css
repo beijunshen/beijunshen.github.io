@@ -2,7 +2,7 @@
 
 :root {
     --text: #222;
-    --muted: #666;
+    --muted: #222;
     --link: #1f4e8c;
     --rule: #e3e3e3;
     --bg: #fff;
@@ -48,7 +48,7 @@ a:hover { text-decoration: underline; }
 }
 .brand:hover { text-decoration: none; }
 .menu { display: flex; gap: 22px; flex-wrap: wrap; }
-.menu a { color: var(--muted); font-size: 0.97rem; }
+.menu a { color: #444; font-size: 0.97rem; }
 .menu a:hover { color: var(--text); text-decoration: none; }
 .menu a.active { color: var(--text); font-weight: 600; }
 
@@ -80,7 +80,7 @@ a:hover { text-decoration: underline; }
 .tagline { margin: 12px 0 10px; line-height: 1.45; }
 .contact { list-style: none; padding: 0; margin: 0; }
 .contact li { margin: 5px 0; display: flex; gap: 8px; align-items: baseline; color: var(--muted); word-break: break-word; }
-.contact .ico { font-size: 0.7rem; width: 12px; color: #999; flex: none; }
+.contact .ico { font-size: 0.7rem; width: 12px; color: #444; flex: none; }
 
 /* ---------- content ---------- */
 .content { min-width: 0; }
