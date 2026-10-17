@@ -254,3 +254,6 @@ img.zoomable { cursor: zoom-in; }
     .band .concept-fig { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .band .concept-fig svg { min-width: 680px; }
 }
+
+ul.about { padding-left: 1.2em; }
+ul.about li { margin: 6px 0; }
