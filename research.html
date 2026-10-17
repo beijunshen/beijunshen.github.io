@@ -62,17 +62,17 @@
 <p>
 My research lies at the intersection of solid mechanics, polymer physics, and advanced manufacturing. It advances the
 experimental, theoretical, and computational mechanics of polymeric materials and structures toward resilient and
-sustainable engineered systems. Its central aim is to establish
+sustainable engineered systems. The central aim is to establish
 predictive relationships among processing, microstructure, time-dependent mechanical behavior, and structural performance,
-and to use these relationships to design and manufacture polymeric materials and structures, with the time-dependent
-behavior of the material treated as a design variable. The work spans the life cycle of a polymeric part: design and
+and to use them in design and manufacturing, with the time-dependent behavior of the material treated as a design
+variable. The work spans the life cycle of a polymeric part: design and
 manufacture for a prescribed response, reliable performance over time in service, and recycling into new load-bearing use.
 </p>
 <p>
 Three connected directions pursue this aim. Constitutive models for polymer families inform structural design, designs
 define targets for manufacturing, and new printed or recycled materials provide data that extend the models. The
-applications range from impact protection and deployable aerospace structures to biomedical devices and the reuse of
-recycled plastics.
+applications range from impact protection and deployable aerospace structures to biomedical devices and the load-bearing
+use of recycled plastics.
 </p>
 <figure class="concept-fig">
 <svg class="concept" viewBox="0 0 1008 936" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research overview. Core: predictive mechanics and advanced manufacturing of polymeric materials and structures. Three connected directions: physics-based constitutive discovery, programming structures in time, and advanced and sustainable manufacturing. Applications: safety, space, sustainability, and health.">
@@ -139,8 +139,8 @@ recycled plastics.
 
 <section class="thrust" id="discovery">
 <h2>1. Physics-Based Constitutive Discovery for Polymer Families</h2>
-<p class="lead">Predictive constitutive models for entire families of polymers, with physical mechanisms built in and
-identified from data by machine learning.</p>
+<p class="lead">Predictive constitutive models for entire families of polymers, whose physical mechanisms and functional
+forms are identified from data by machine learning.</p>
 <p>
 Constitutive models relate the stress in a material to its deformation history, and they underpin finite-element analysis
 and design. For polymers whose response is viscoelastic and viscoplastic, spans the glass transition, and depends on
@@ -150,8 +150,8 @@ in which composition, crosslink density, or processing conditions enter as varia
 regression, identifies the physical mechanisms involved, such as network stretching, reptation, and glassy yield, together
 with their functional forms, so that the resulting models remain interpretable and can be implemented directly in
 finite-element codes. Once a model is established for a family, a new member can be characterized with a small number of
-tests. The long-term goal is an open library of physics-based constitutive models, organized by mechanism, from which a new
-polymer can be simulated and used in design after a few tests.
+tests. The long-term goal is an open library of physics-based constitutive models, organized by mechanism, that can be extended
+to new polymer families as they are introduced.
 </p>
 <p>
 This direction builds on my postdoctoral work on digitally mixed polymers, printed voxel by voxel from a rubbery and a glassy
@@ -193,12 +193,13 @@ structure together.</p>
 The function of architected structures often relies on geometric nonlinearity, such as buckling, snap-through, and folding,
 yet these structures are commonly designed with the material idealized as linear elastic or hyperelastic. A polymeric
 structure involves two sets of time scales: those of the material, set by its relaxation spectrum, and those of the
-structure, such as the rate at which an instability develops and the time required for a deformed region to recover. Their
-ratio acts as a structural Deborah number, which determines whether a region responds in a rubbery or a glassy manner during
-an instability. This direction studies how the two sets of time scales interact and how they can be tuned together. Spatial
-heterogeneity is known to broaden the relaxation spectrum of glass-forming polymers; in a printed structure, such
-heterogeneity can be prescribed, because the local composition shifts and broadens the local relaxation spectrum, while the
-geometry determines how relaxation translates into load transfer, buckling, and recovery. The aim is structures with a
+structure, such as the rate at which an instability develops and the time required for a deformed region to recover. The
+ratio of a material relaxation time to a structural time scale acts as a structural Deborah number, which determines
+whether a region responds in a rubbery or a glassy manner during an instability. This direction studies how the two sets of
+time scales interact and how they can be tuned together. Spatial heterogeneity is known to broaden the relaxation spectrum
+of glass-forming polymers. In a printed structure, this heterogeneity can be prescribed: the local composition shifts and
+broadens the local relaxation spectrum, and the geometry determines how relaxation translates into load transfer, buckling,
+and recovery. The aim is structures with a
 designed time-dependent response, such as lattices whose energy absorption remains nearly constant over a wide range of
 impact speeds, or folded structures that deploy in a prescribed sequence after long-term storage, without sensors or
 actuators. The long-term goal is a set of design principles that relate material and structural time scales, and a design
@@ -208,8 +209,8 @@ tool that translates a required response over time into composition and geometry
 This direction builds on my doctoral research on architected lattices made of liquid crystal elastomers, in which I showed
 that the viscoelasticity of the material alters the structural response. The interplay of nonlinear viscoelasticity and
 snap-through caused buckled layers to <strong>recover locally and partially</strong>, a path-dependent response that
-increased energy absorption. Introducing a stretchable elastomer bar that competes with beam buckling activated stretching
-and bending members in sequence and increased energy absorption by <strong>up to 2.5 times</strong> relative to a rigid bar.
+increased energy absorption. In a subsequent design, a stretchable elastomer bar that competes with beam buckling activated
+stretching and bending members in sequence and increased energy absorption by <strong>up to 2.5 times</strong> relative to a rigid bar.
 </p>
 <p class="apps"><strong>Applications:</strong> reusable impact protection; energy absorption that is insensitive to impact speed; deployable aerospace structures; vibration isolation.</p>
 <div class="figrow">
@@ -248,7 +249,7 @@ batch. This direction relates the size, shape, and continuity of contaminant dom
 molecular weight, to the anisotropic mechanical response, including ductility, and formulates constitutive models in terms
 of these variables. A small set of standard measurements, such as calorimetry, microscopy, and rheometry, could then be used
 to qualify a batch, and the same relations would identify processing conditions that produce a favorable morphology. Aging
-in service, through chain scission and crosslinking, can be incorporated through the same variables. The long-term goal is
+in service, which proceeds through chain scission and crosslinking, can be described with the same variables. The long-term goal is
 to make processing and recycling part of the design of polymeric structures, so that recycled feedstocks can be qualified
 and used in load-bearing applications with the same confidence as virgin materials.
 </p>
