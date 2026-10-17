@@ -257,3 +257,7 @@ img.zoomable { cursor: zoom-in; }
 
 ul.about { padding-left: 1.2em; }
 ul.about li { margin: 6px 0; }
+ul.cv { list-style: none; padding-left: 0; margin-bottom: 16px; }
+ul.cv > li { margin: 0 0 10px; }
+ul.cv ul { list-style: disc; padding-left: 1.3em; margin: 3px 0 0; }
+ul.cv ul li { margin: 2px 0; }
