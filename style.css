@@ -145,7 +145,7 @@ figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 6px; line-heig
 
 /* relevant publications under each research pillar */
 .rel-label { font-weight: 600; margin: 16px 0 4px; }
-.rel { font-size: 0.93rem; }
+.rel { font-size: 1rem; }
 .rel li { margin: 5px 0; }
 
 /* news */
