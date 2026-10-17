@@ -60,14 +60,12 @@
 <section>
 <h1>Research</h1>
 <p>
-Polymers carry load in helmet liners and body armor, aircraft and spacecraft components, medical devices, and soft robots.
-Their response is large, nonlinear, and dissipative; it depends on strain rate, temperature, and loading history, and it is
-set by the microstructure that composition and processing produce and by the geometry of the structure. My research combines
-experiments, constitutive modeling, finite-element simulation, and machine learning to understand and predict this response
-and to use it in design. I work with three classes of polymers: rubbery and glassy photopolymers mixed voxel by voxel in
-multimaterial 3D printing, liquid crystal elastomers built into architected lattices, and semicrystalline polyolefins,
-virgin and recycled, shaped by melt extrusion. The three directions below share one approach: measurements calibrate
-constitutive laws, simulations with those laws guide design, and the manufactured parts are tested to refine the laws.
+My long-term goal is to make the mechanical response of polymeric materials and structures predictable from their
+composition, microstructure, and geometry, and to use that prediction to design and manufacture them. I work with three
+classes of polymers: rubbery and glassy photopolymers mixed voxel by voxel in multimaterial 3D printing, liquid crystal
+elastomers built into architected lattices, and semicrystalline polyolefins, virgin and recycled, shaped by melt extrusion.
+The three research directions below are connected: constitutive laws for polymer families are the basis for structural
+design, designs set targets for manufacturing, and new printed or recycled materials return data that extend the laws.
 </p>
 <figure class="overview-fig">
 <svg class="overview" viewBox="0 0 1140 436" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research overview: three research pillars and how they connect">
@@ -109,18 +107,20 @@ constitutive laws, simulations with those laws guide design, and the manufacture
 <section class="thrust" id="discovery">
 <h2>Physics-Based Constitutive Discovery for Polymer Families</h2>
 <p>
-Constitutive models connect a polymer&rsquo;s microstructure to the stress it carries, and finite-element design rests on
-them. For polymers that are viscoelastic and viscoplastic and pass through the glass transition, these models are still
-built one material at a time. In my postdoctoral work on digitally mixed polymers, printed voxel by voxel from a rubbery and
-a glassy photopolymer, I showed that temperature, frequency, and composition act together on the glass transition of the
-whole family, a time&ndash;temperature&ndash;composition equivalence, and built one finite-strain viscoelastic&ndash;viscoplastic
-framework that predicts the response of a composition withheld from calibration. The same law now predicts new printed
-structures, such as wavy-fiber composites, without refitting. Building on this, I aim to discover physics-based laws from data:
-machine learning, including symbolic regression, selects physical mechanisms such as network stretching, reptation, and
-glassy yield and finds their functional forms, while composition or crosslink density enters through the parameters. With
-one law for a family, a new member is characterized with a few tests instead of a full test campaign, which shortens the
-path from a new material to its use in design. Photopolymers cured by digital light processing, in which light dose sets
-crosslink density, are the next family.
+Constitutive models connect the microstructure of a polymer to the stress it carries, and finite-element design rests on
+them. For polymers that are viscoelastic and viscoplastic and pass through the glass transition, these models are usually
+developed one material at a time. In my postdoctoral work on digitally mixed polymers, printed voxel by voxel from a rubbery
+and a glassy photopolymer, I showed that temperature, frequency, and composition act together on the glass transition of
+the whole family, a <strong>time&ndash;temperature&ndash;composition equivalence</strong>. On this basis I built one
+finite-strain viscoelastic&ndash;viscoplastic framework for the family that <strong>predicts the response of a composition
+withheld from calibration</strong>.
+</p>
+<p>
+I aim to discover physics-based constitutive laws from data. Machine learning, including symbolic regression, will select
+physical mechanisms such as network stretching, reptation, and glassy yield and find their functional forms, while
+composition or crosslink density enters through the parameters. Each law then remains interpretable and can be implemented
+in finite-element codes. With one law for a family, a new member is characterized with a few tests instead of a full test
+campaign. Photopolymers cured by digital light processing, in which light dose sets crosslink density, are the next family.
 </p>
 <div class="figrow">
     <figure>
@@ -148,17 +148,21 @@ crosslink density, are the next family.
 <p>
 Architected structures owe their function to geometric nonlinearity: beams buckle, shells snap through, and folds open.
 They are usually designed with the material treated as linear elastic or hyperelastic. During my Ph.D., I combined
-architected lattices with liquid crystal elastomers and found that the material changes what the structure does. Nonlinear
-viscoelasticity and snap-through made buckled layers recover locally and partially, a path-dependent response that
-increased energy absorption; and a stretchable elastomer bar that competes with beam buckling activated bending and
-stretching members in sequence, raising energy absorption up to 2.5 times relative to a rigid bar. Such a structure has two
-sets of time scales: those of the material, set by its relaxation spectrum, and those of the structure, such as how quickly
-an instability develops and how long a deformed region takes to recover. I study how the two interact and how they can be
-tuned together. Heterogeneity is known to broaden relaxation in glasses at the molecular scale; in a printed structure it
-can be placed deliberately, since composition printed voxel by voxel shifts and broadens the local relaxation spectrum, and
-the geometry then decides how that relaxation turns into load transfer, buckling, and recovery. The aim is structures whose
-response over time is designed, such as lattices that absorb nearly the same energy over a wide range of impact speeds, or
-folded structures that deploy in a set order after long storage, without sensors or actuators.
+architected lattices with liquid crystal elastomers and found that the viscoelastic material changes what the structure
+does. Together with snap-through, nonlinear viscoelasticity made buckled layers <strong>recover locally and
+partially</strong>, a path-dependent response that increased energy absorption. A stretchable elastomer bar that competes
+with beam buckling activated bending and stretching members in sequence and raised energy absorption <strong>up to 2.5
+times</strong> relative to a rigid bar.
+</p>
+<p>
+Such a structure has two sets of time scales: those of the material, set by its relaxation spectrum, and those of the
+structure, such as the rate at which an instability develops and the time a deformed region takes to recover. I study how
+the two interact and how they can be tuned together. Heterogeneity is known to broaden relaxation in glasses at the
+molecular scale; in a printed structure it can be placed deliberately, because composition printed voxel by voxel shifts
+and broadens the local relaxation spectrum, and the geometry then decides how that relaxation turns into load transfer,
+buckling, and recovery. The aim is structures whose response over time is designed, such as lattices that absorb nearly
+the same energy over a wide range of impact speeds and folded structures that deploy in a set order after long storage,
+without sensors or actuators.
 </p>
 <div class="figrow">
     <figure>
@@ -187,17 +191,20 @@ folded structures that deploy in a set order after long storage, without sensors
 <p>
 Manufacturing sets the microstructure on which the first two directions build: composition placed voxel by voxel in
 multimaterial 3D printing, crosslink density set by light dose in digital light processing, and the morphology of blends and
-recyclates formed in melt extrusion. As an undergraduate I contributed to a multi-axis rotary 3D printer for curved-layer
+recyclates formed in melt extrusion. As an undergraduate, I contributed to a multi-axis rotary 3D printer for curved-layer
 fused deposition modeling, and at Columbia I design and print voxel-graded polymer structures. During my Ph.D., I studied
 films extruded from post-consumer polypropylene and showed that polyethylene drawn into elongated striations, rather than
-crystalline orientation, governs anisotropic failure, and that splitting and restacking the melt with a layer-multiplying
-element doubled transverse ductility and restored the performance of virgin material with the same polyethylene content.
+crystalline orientation, governs anisotropic failure. Splitting and restacking the melt with a layer-multiplying element
+<strong>doubled transverse ductility</strong> and restored the performance of virgin material with the same polyethylene
+content.
+</p>
+<p>
 Post-consumer polyolefins are still rarely used in load-bearing parts, because each batch carries different contaminants
 and has a different processing history. I aim to relate the size, shape, and continuity of contaminant domains, together
 with crystallinity and molecular weight, to anisotropic failure, and to build constitutive and failure models in these
-variables. Measurements that recyclers can make routinely, such as calorimetry, microscopy, and rheometry, would then be
-enough to qualify a batch, and the same relations would indicate the processing conditions that produce a favorable
-morphology. Aging in service enters the same variables through chain scission and crosslinking.
+variables. Measurements that recyclers make routinely, such as calorimetry, microscopy, and rheometry, would then be enough
+to qualify a batch, and the same relations would indicate the processing conditions that produce a favorable morphology.
+Aging in service enters the same variables through chain scission and crosslinking.
 </p>
 <figure class="wide">
     <img src="images/research/pes_ga.jpg" alt="Graphical abstract of the recycled polypropylene film study" loading="lazy">
