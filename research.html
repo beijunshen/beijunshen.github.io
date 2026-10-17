@@ -116,7 +116,8 @@ finite-strain viscoelastic&ndash;viscoplastic framework for the family that <str
 withheld from calibration</strong>.
 </p>
 <p>
-I aim to discover physics-based constitutive laws from data. Machine learning, including symbolic regression, will select
+I aim to discover physics-based constitutive laws for polymer families from data, including their rate- and
+temperature-dependent viscoelastic and viscoplastic response. Machine learning, including symbolic regression, will select
 physical mechanisms such as network stretching, reptation, and glassy yield and find their functional forms, while
 composition or crosslink density enters through the parameters. Each law then remains interpretable and can be implemented
 in finite-element codes. With one law for a family, a new member is characterized with a few tests instead of a full test
@@ -156,8 +157,9 @@ times</strong> relative to a rigid bar.
 </p>
 <p>
 Such a structure has two sets of time scales: those of the material, set by its relaxation spectrum, and those of the
-structure, such as the rate at which an instability develops and the time a deformed region takes to recover. I study how
-the two interact and how they can be tuned together. Heterogeneity is known to broaden relaxation in glasses at the
+structure, such as the rate at which an instability develops and the time a deformed region takes to recover. Their
+ratio plays the role of a Deborah number for the structure: it decides whether a region responds as a rubber or as a glass
+at the moment it buckles. I study how the two sets of time scales interact and how they can be tuned together. Heterogeneity is known to broaden relaxation in glasses at the
 molecular scale; in a printed structure it can be placed deliberately, because composition printed voxel by voxel shifts
 and broadens the local relaxation spectrum, and the geometry then decides how that relaxation turns into load transfer,
 buckling, and recovery. The aim is structures whose response over time is designed, such as lattices that absorb nearly
@@ -202,8 +204,8 @@ content.
 Post-consumer polyolefins are still rarely used in load-bearing parts, because each batch carries different contaminants
 and has a different processing history. I aim to relate the size, shape, and continuity of contaminant domains, together
 with crystallinity and molecular weight, to anisotropic failure, and to build constitutive and failure models in these
-variables. Measurements that recyclers make routinely, such as calorimetry, microscopy, and rheometry, would then be enough
-to qualify a batch, and the same relations would indicate the processing conditions that produce a favorable morphology.
+variables. A few standard measurements, such as calorimetry, microscopy, and rheometry, would then be enough to qualify a
+batch, and the same relations would indicate the processing conditions that produce a favorable morphology.
 Aging in service enters the same variables through chain scission and crosslinking.
 </p>
 <figure class="wide">
