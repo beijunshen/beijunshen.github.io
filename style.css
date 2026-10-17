@@ -168,7 +168,7 @@ figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 6px; line-heig
 }
 
 /* publications */
-.legend { color: var(--muted); font-size: 0.92rem; }
+.legend { color: var(--muted); font-size: 1rem; }
 .pubs { padding-left: 1.6em; }
 .pubs li { margin: 0 0 12px; padding-left: 4px; }
 .note { color: var(--muted); }
