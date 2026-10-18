@@ -74,8 +74,9 @@ The research is organized in three connected directions. The first provides phys
 families of polymers; the second uses these models to design structures whose response over time is prescribed; and the
 third links both to processing and manufacturing. Each direction combines experiment, theory, and computation:
 large-deformation mechanical testing across strain rates and temperatures, dynamic mechanical analysis, and digital image
-correlation; constitutive modeling, finite-element simulation with user-defined material models, and machine learning; and
-multimaterial 3D printing, which produces many of the materials and structures studied.
+correlation; constitutive modeling, finite-element simulation with user-defined material models, and machine learning; and multimaterial 3D printing, which produces many of the materials and structures studied. Because multimaterial
+printing sets the composition, and hence the mechanical behavior, of a material voxel by voxel, the same platform serves to
+calibrate the models, realize the designs, and test the predictions.
 </p>
 <p>
 Together, the three directions form a <strong>predictive digital twin</strong> of polymeric materials and structures. The
@@ -205,7 +206,8 @@ for seventy years, to a <strong>time&ndash;temperature&ndash;composition equival
 phase angle and the relaxation spectrum superpose in the same way, so the family shares one distribution of relaxation
 times. A single closed form then gives the <strong>stiffness and damping of the entire family across composition,
 temperature, and frequency</strong>, and a similar equivalence is expected for other printing processes that set
-composition or degree of cure voxel by voxel. From large-deformation compression tests over three orders of magnitude in
+composition or degree of cure voxel by voxel. The equivalence also explains the steep, S-shaped rise of room-temperature
+stiffness with composition as the glass transition passing through the test temperature. From large-deformation compression tests over three orders of magnitude in
 strain rate, I formulated a finite-strain viscoelastic&ndash;viscoplastic constitutive framework for the whole family
 based on the physical mechanisms of deformation, with parameters that vary with composition according to scaling laws, implemented it for finite-element
 analysis, and showed that it <strong>predicts the response of a composition withheld from calibration</strong>. A
@@ -287,7 +289,9 @@ optimal ratio of bar to beam thickness, bending and stretching are activated in 
 <strong>up to 2.5 times</strong> the energy of a design with a rigid bar [<a href="https://doi.org/10.1016/j.jmps.2025.106497" target="_blank" rel="noopener noreferrer">Shen et al., <i>J. Mech. Phys. Solids</i> 2026</a>]. Competing dissipation
 mechanisms can thus be <strong>nested across the unit-cell and lattice length scales</strong>. The underlying principle
 extends to other lattice architectures: by tuning geometry and material properties, bending and stretching elements can
-be activated in sequence within unit cells and across layers. In ongoing work, presented at the 2026 Society of
+be activated in sequence within unit cells and across layers. In both studies, the gain in energy absorption came from
+controlling when each mechanism is activated during loading; this direction generalizes that idea to the time scales of
+materials and structures. In ongoing work, presented at the 2026 Society of
 Engineering Science Annual Technical Meeting, I am designing fiber networks that store and dissipate energy, using
 multimaterial 3D printing of viscoelastic polymers.
 </p>
@@ -335,9 +339,12 @@ mechanics-based characterization and predictive models that connect process para
 microstructure to constitutive behavior, extending the models of the first direction to include microstructural
 variables such as crystallinity, molecular weight, and the morphology of minor phases. For printed polymers, these models describe
 how the composition field, the light dose, and the printing path set the local constitutive behavior, process-induced
-anisotropy, and the mechanical behavior of interfaces between dissimilar materials. For recycled polymers, starting with
+anisotropy, and the mechanical behavior of interfaces between dissimilar materials; the same printing processes produce
+the specimen libraries for the high-throughput characterization of the first direction. For recycled polymers, starting with
 <strong>post-consumer polyolefins</strong>, they describe how melt-processing conditions shape the morphology of minor
-polymer phases and contaminants, and how that morphology governs stiffness, strength, ductility, and anisotropy. The
+polymer phases and contaminants, and how that morphology governs stiffness, strength, ductility, and anisotropy. The same microstructural variables
+describe aging in service under heat and ultraviolet light, which alters the molecular structure through chain scission
+and crosslinking. The
 second step is to <strong>invert these relations, from a target performance to the process</strong>: to select printing
 parameters that realize the designs of the second direction as manufactured parts with predictable properties, and to
 choose melt-processing conditions that turn the contaminants of a recycled feedstock into a morphology that preserves ductility. In the same
@@ -349,10 +356,7 @@ The long-term goal is manufacturing in which processing is chosen on the basis o
 recycled polymers, this would allow plastic waste to be upcycled into load-bearing products, such as automotive,
 construction, and packaging components, reducing the demand for virgin resin and supporting a more circular plastics
 economy. For printed polymers, it would allow graded and multimaterial components to be manufactured with the reliability
-required in protective, aerospace, and biomedical applications. Aging in service under heat and ultraviolet light, which
-alters the molecular structure through chain scission and crosslinking, can be described with the same microstructural
-variables. In addition, the same printing processes produce the specimen libraries for the high-throughput
-characterization of the first direction.
+required in protective, aerospace, and biomedical applications. 
 </p>
 <p>
 This direction builds on my experience with both printed and recycled polymers. As an undergraduate, I designed and
