@@ -234,6 +234,7 @@ img.zoomable { cursor: zoom-in; }
 
 /* corresponding-author and equal-contribution marks */
 .content sup { font-weight: 900; color: inherit; font-size: 1em; line-height: 0; vertical-align: 0.45em; margin-left: 1px; }
+.content figcaption sup { font-weight: normal; font-size: 0.75em; vertical-align: super; line-height: 0; margin-left: 0; }
 
 /* full-width research overview figure at the top of the home page */
 .hero { max-width: 1080px; margin: 28px auto 0; padding: 0 24px; }
