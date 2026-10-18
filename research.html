@@ -60,13 +60,12 @@
 <section>
 <h1>Research</h1>
 <p>
-My research lies at the intersection of solid mechanics, polymer physics, and advanced manufacturing. It advances the
+My research lies at the intersection of solid mechanics, polymeric materials, and advanced manufacturing. It advances the
 experimental, theoretical, and computational mechanics of polymeric materials and structures toward resilient and
 sustainable engineered systems. The central aim is to establish predictive relationships among processing, microstructure,
-time-dependent mechanical behavior, and structural performance, and to use them in design and manufacturing, with the
-time-dependent behavior of the material treated as a design variable. The work spans the life cycle of a polymeric part:
-design and manufacture for a prescribed response, reliable performance over time in service, and recycling into new
-load-bearing use.
+time-dependent mechanical behavior, and structural performance, and to use them in the design and manufacture of polymeric
+materials and structures. The work spans the life cycle of a polymeric part: design and manufacture for a prescribed
+response, reliable performance over time in service, and recycling into new load-bearing use.
 </p>
 <p>
 Three connected directions pursue this aim, combining large-deformation mechanical testing across strain rates and
@@ -142,8 +141,8 @@ biomedical devices and the load-bearing use of recycled plastics.
 
 <section class="thrust" id="discovery">
 <h2>1. Physics-Based Constitutive Discovery for Polymer Families</h2>
-<p class="lead">Predictive constitutive models for entire families of polymers, whose physical mechanisms and functional
-forms are identified from data by machine learning.</p>
+<p class="lead">Physics-based constitutive models for entire families of polymers, developed by combining physical
+insight with machine learning.</p>
 <p>
 Constitutive models relate the stress in a material to its deformation history, and they underpin finite-element analysis
 and design. For polymers whose response is viscoelastic and viscoplastic, spans the glass transition, and depends on
@@ -153,20 +152,23 @@ models, but they have largely addressed hyperelastic behavior, and models repres
 limited physical interpretation. This direction differs in three respects. It addresses time- and history-dependent
 behavior, including viscoelasticity and viscoplasticity through the glass transition. It seeks one physics-based model for
 an entire family of polymers, in which composition, crosslink density, or processing conditions enter as variables, in
-place of one model per material. And it discovers closed-form functional forms: machine learning, including symbolic
-regression, identifies the physical mechanisms involved, such as network stretching, reptation, and glassy yield, so that
-the resulting models remain interpretable and can be implemented directly in finite-element codes. Once a model is established for a family, a new member can be characterized with a small number of
-tests. The long-term goal is an open library of physics-based constitutive models, organized by mechanism, that can be extended
-to new polymer families as they are introduced.
+place of one model per material. And it combines physical insight with machine learning, including symbolic regression, to
+identify the mechanisms involved, such as network stretching, reptation, and glassy yield, together with their closed-form
+functional forms, so that the resulting models remain interpretable and can be implemented directly in finite-element
+codes. Once a model is established for a family, the behavior of a new member can be predicted from a small number of
+calibration tests. The long-term goal is an open library of physics-based constitutive models, organized by mechanism, that
+can be extended to new polymer families as they are introduced.
 </p>
 <p>
 This direction builds on my postdoctoral work on digitally mixed polymers, printed voxel by voxel from a rubbery and a glassy
 photopolymer. Combining large-deformation compression tests over three orders of magnitude in strain rate with dynamic
 mechanical analysis, I showed that temperature, frequency, and composition act jointly on the glass transition of the
-entire family, a <strong>time&ndash;temperature&ndash;composition equivalence</strong>. On this basis, I developed a single
-finite-strain viscoelastic&ndash;viscoplastic framework for the family, implemented for finite-element analysis, that
-<strong>predicts the response of a composition withheld from calibration</strong>. Photopolymers cured by digital light
-processing, in which the light dose controls crosslink density, are the next family to be studied.
+entire family, a <strong>time&ndash;temperature&ndash;composition equivalence</strong>. On this basis, I formulated a single
+finite-strain viscoelastic&ndash;viscoplastic framework for the family from its physical mechanisms, implemented it for
+finite-element analysis, and showed that it <strong>predicts the response of a composition withheld from
+calibration</strong>. Mechanism-based formulations of this kind provide the starting point for discovery with machine
+learning. Photopolymers cured by digital light processing, in which the light dose controls crosslink density, are the next
+family to be studied.
 </p>
 <p class="apps"><strong>Applications:</strong> rapid characterization of new and printed polymers; predictive simulation of
 polymeric components across loading rate and temperature; design of graded and multimaterial parts.</p>
@@ -194,21 +196,22 @@ polymeric components across loading rate and temperature; design of graded and m
 
 <section class="thrust" id="design">
 <h2>2. Programming Structures in Time</h2>
-<p class="lead">Structures whose response over time is designed by tuning the time scales of the material and of the
-structure together.</p>
+<p class="lead">Co-design of the intrinsic time scales of the material and the time scales of the structure, to achieve
+a prescribed time-dependent response.</p>
 <p>
 The function of architected structures often relies on geometric nonlinearity, such as buckling, snap-through, and folding,
 yet these structures are commonly designed with the material idealized as linear elastic or hyperelastic. A polymeric
 structure involves two sets of time scales: those of the material, set by how quickly it relaxes, and those of the
 structure, such as the rate at which an instability develops and the time required for a deformed region to recover.
 Whether a region responds in a rubbery or a glassy manner during an instability depends on how these two time scales
-compare. This direction studies how they interact and how they can be tuned together. In a printed structure, the local
+compare. This direction studies how they interact and how they can be designed together. In a printed structure, the local
 composition sets the local relaxation behavior, and the geometry determines how relaxation translates into load transfer,
-buckling, and recovery. Target responses include lattices whose energy absorption remains nearly constant over a wide range
-of impact speeds and folded structures that deploy in a prescribed sequence after long-term storage, both achieved without
-sensors or actuators. Graded polymers with a designed rate-dependent response are also relevant to protective padding and
-to soft biomedical components such as implants. The long-term goal is a set of design principles that relate material and structural time scales,
-and a design tool that translates a required response over time into composition and geometry.
+buckling, and recovery. Target responses include energy absorption that remains nearly constant over a wide range of impact
+speeds, deployment and shape change in a prescribed sequence after long-term storage, vibration damping over a chosen
+frequency range, and soft robots whose motions are sequenced passively by the material, all without sensors or active
+control. Graded polymers with a designed rate-dependent response are also relevant to protective padding and to soft
+biomedical components such as implants. The long-term goal is a set of design principles that relate material and
+structural time scales, and a design tool that translates a required response over time into composition and geometry.
 </p>
 <p>
 This direction builds on my doctoral research on architected lattices made of liquid crystal elastomers, in which I combined
@@ -220,7 +223,8 @@ stretching and bending members in sequence and increased energy absorption by <s
 rigid bar. My ongoing work on printed fiber networks, presented at the 2026 Society of Engineering Science Annual Technical
 Meeting, examines how material and structural time scales interact in a printed structure.
 </p>
-<p class="apps"><strong>Applications:</strong> reusable impact protection; energy absorption that is insensitive to impact speed; deployable aerospace structures; vibration isolation; soft biomedical components.</p>
+<p class="apps"><strong>Applications:</strong> impact protection with rate-insensitive energy absorption; deployable and
+shape-morphing structures; vibration damping; passively sequenced soft robots; soft biomedical components.</p>
 <div class="figrow">
     <figure>
         <img src="images/research/adma_sim.jpg" alt="Finite-element simulations of stacked liquid crystal elastomer layers" loading="lazy">
@@ -246,8 +250,8 @@ Meeting, examines how material and structural time scales interact in a printed 
 
 <section class="thrust" id="manufacturing">
 <h2>3. Advanced and Sustainable Manufacturing</h2>
-<p class="lead">Characterization and predictive modeling that link processing to microstructure and mechanical
-performance, from multimaterial 3D printing to recycled feedstocks.</p>
+<p class="lead">Mechanics-based characterization and modeling of processing&ndash;structure&ndash;property relations, for
+multimaterial 3D-printed and recycled polymers.</p>
 <p>
 Manufacturing and processing determine the microstructure on which the first two directions depend: the composition placed
 voxel by voxel in multimaterial 3D printing, the crosslink density set by the light dose in digital light processing, and
