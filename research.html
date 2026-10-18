@@ -67,7 +67,7 @@ sustainable engineered systems. The work spans the <strong>life cycle of a polym
 for a prescribed response, reliable performance over time in service, and recycling into new load-bearing use.
 </p>
 <p>
-The work is organized in three connected directions, each combining experiment, theory, and computation. The experiments
+The research is organized in three connected directions, each combining experiment, theory, and computation. The experiments
 include large-deformation mechanical testing across strain rates and temperatures, dynamic mechanical analysis, and digital
 image correlation; the theory and computation include constitutive modeling, finite-element simulation with user-defined
 material models, and machine learning; and multimaterial 3D printing produces many of the materials and structures studied.
@@ -155,14 +155,17 @@ Constitutive models relate the stress in a material to its deformation history, 
 and engineering design. For polymers, deformation is large and nonlinear, and the response depends strongly on loading
 rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture, and
 other environmental conditions. Models that capture this behavior are typically formulated by experts for one material at
-a time, through repeated cycles of refinement and calibration, which slows the adoption of new polymers. Data-driven
+a time, through repeated cycles of refinement and calibration, a practice that slows the adoption of new polymers. Data-driven
 methods promise to accelerate this process, but most have addressed either hyperelastic behavior at large deformation or
 history-dependent behavior at small strain; the large, rate- and temperature-dependent deformation of polymers in
-service has received comparatively little attention. Neural-network models also carry many parameters and hyperparameters with little physical meaning: they reproduce their training data but, with little physics built in, often extrapolate poorly beyond it and do
-not reveal the underlying mechanisms; they often must be retrained for a new material; and they add cost at every integration point of a finite-element simulation.
+service has received comparatively little attention. Neural-network models also involve many parameters and hyperparameters that have little physical meaning. Because
+few physical principles are built into them, they often extrapolate poorly beyond their training data and do not reveal
+the underlying mechanisms; they typically must be retrained for a new material; and evaluating them at every integration
+point adds cost to large-scale finite-element simulations.
 </p>
 <p>
-This direction develops a <strong>modular library of physics-based constitutive models</strong> for polymer families. Each
+This direction has two parts. The first is a <strong>modular library of physics-based constitutive models</strong>
+for polymer families. Each
 module represents one physical mechanism, such as entropic stretching of the molecular network, intermolecular resistance
 to yielding in the glassy state, or molecular relaxation by reptation, together with internal variables that describe how
 the microstructure evolves with deformation and environmental exposure, such as molecular orientation, crystallinity, and crosslink density. Composition, crosslink density, and processing conditions enter the modules as variables, so that
@@ -177,8 +180,8 @@ The second part of this direction is <strong>high-throughput characterization</s
 these models. Multimaterial 3D printing can produce specimen libraries in which composition or processing conditions vary
 systematically, as well as graded specimens in which full-field strain measurement captures the response of many
 compositions in a single test. These specimens are tested at large deformation under controlled loading and environmental
-conditions, so that the data inform the mechanisms of the model as well as its parameters, and machine learning selects
-the experiments that are most informative for the next refinement. The long-term goal is an open library with which the
+conditions, so that the data inform the mechanisms of the model as well as its parameters. Machine learning then selects the
+experiments that are most informative for the next refinement. The long-term goal is an open library with which the
 constitutive behavior of a new polymer family, or of a known family under new environmental conditions, can be
 established from a small number of tests. Such a library would shorten the development and qualification of new polymers,
 enable predictive simulation of polymeric components in protective equipment, aerospace structures, medical devices, and
@@ -187,7 +190,7 @@ for the multimaterial designs of the second direction.
 </p>
 <p>
 This direction builds on my postdoctoral work on digitally mixed polymers, in which an elastomeric and a glassy
-photopolymer are mixed voxel by voxel by multimaterial 3D printing. From dynamic mechanical analysis of compositions
+photopolymer are mixed voxel by voxel through multimaterial 3D printing. From dynamic mechanical analysis of compositions
 spanning the family, I extended the classical time&ndash;temperature equivalence, a cornerstone of polymer viscoelasticity
 for seventy years, to a <strong>time&ndash;temperature&ndash;composition equivalence</strong>. The storage modulus of every composition, at every temperature and frequency, collapses onto one master curve; the
 phase angle and the relaxation spectrum superpose in the same way, so the family shares one distribution of relaxation
@@ -195,7 +198,7 @@ times. A single closed form then gives the <strong>stiffness and damping of the 
 temperature, and frequency</strong>, and a similar equivalence is expected for other printing processes that set
 composition or degree of cure voxel by voxel. From large-deformation compression tests over three orders of magnitude in
 strain rate, I formulated a finite-strain viscoelastic&ndash;viscoplastic constitutive framework for the whole family
-from its physical mechanisms, with parameters that follow composition scaling laws, implemented it for finite-element
+based on the physical mechanisms of deformation, with parameters that vary with composition according to scaling laws, implemented it for finite-element
 analysis, and showed that it <strong>predicts the response of a composition withheld from calibration</strong>. A
 collaborative study applied data-driven discovery to the same materials [<a href="https://doi.org/10.48550/arXiv.2609.04541" target="_blank" rel="noopener noreferrer">Garc&iacute;a-&Aacute;vila et al., arXiv 2026</a>]. These mechanism-based
 formulations are the starting point for the modular library.
@@ -234,7 +237,7 @@ functions over time.</p>
 <p>
 Architected structures derive functions such as energy absorption, deployment, and shape change from elastic
 instabilities, such as buckling and snap-through, and from other large, geometrically nonlinear deformations, such as
-folding. These instabilities have time scales of their own, set by the duration of loading and by the speed at which a
+folding. The structural response has time scales of its own, set by the duration of loading and by the speed at which a
 buckled or snapping region develops. Polymers have intrinsic time scales as well, characterized by relaxation times that are set by the constituent
 materials and their composition and that change with temperature, stress, and environmental conditions such as light and
 moisture. Whether a region of a polymeric structure responds in a relaxed, rubbery manner or in an
@@ -266,11 +269,10 @@ such as implants.
 <p>
 This direction builds on my doctoral research on energy absorption in architected lattices made of liquid crystal
 elastomers, in which I coupled structural snap-through instabilities with the intrinsic dissipation mechanisms of the
-material, viscoelasticity and soft elasticity, and studied how to make them act in synergy. My finite-element simulations
+material, viscoelasticity and soft elasticity, and studied how to make the two act in synergy. My finite-element simulations
 showed that viscoelasticity makes stacked layers buckle nonuniformly, with viscous dissipation that grows with strain
 rate, the number of layers, and graded beam thickness, and that viscoelasticity and snap-through together make buckled
-layers <strong>recover locally and partially</strong>, further increasing energy absorption [<a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Jeon, Shen, et al., <i>Adv. Mater.</i> 2022</a>]. Building on
-this design, I replaced the rigid horizontal member of the unit cell with a stretchable liquid crystal elastomer bar,
+layers <strong>recover locally and partially</strong>, further increasing energy absorption [<a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Jeon, Shen, et al., <i>Adv. Mater.</i> 2022</a>]. Building on this lattice design, I replaced the rigid horizontal member of the unit cell with a stretchable liquid crystal elastomer bar,
 combining viscoelastic buckling with the tensile soft-elastic response of monodomain liquid crystal elastomers. At an
 optimal ratio of bar to beam thickness, bending and stretching are activated in sequence, and the lattice absorbs
 <strong>up to 2.5 times</strong> the energy of a design with a rigid bar [<a href="https://doi.org/10.1016/j.jmps.2025.106497" target="_blank" rel="noopener noreferrer">Shen et al., <i>J. Mech. Phys. Solids</i> 2026</a>]. Competing dissipation
@@ -312,26 +314,24 @@ microstructure and mechanical behavior, and using that understanding to design a
 <p>
 Manufacturing is where the microstructure of a polymeric part, and hence its mechanical behavior, is set: the composition
 placed voxel by voxel and the degree of cure set by the light dose in 3D printing, and the morphology, crystallinity, and
-molecular orientation formed during extrusion and molding. Process parameters are nevertheless often selected
-empirically, and printed parts can depart from the properties assumed in their design. For recycled polymers, variability
+molecular orientation formed during extrusion and molding. Yet process parameters are often selected empirically, and printed parts can depart from the properties assumed in their design. For recycled polymers, variability
 compounds the difficulty. Post-consumer feedstocks differ from batch to batch in composition, contamination, and
 thermomechanical history, so that polyolefins, the largest-volume plastics, are mostly downcycled into products of lower
-value. Recent mechanics-based work has designed composite structures that tolerate this variability [<a href="https://doi.org/10.1073/pnas.2502613122" target="_blank" rel="noopener noreferrer">Georgiou et al., <i>PNAS</i> 2025</a>]
-and has developed high-throughput testing to measure it [<a href="https://doi.org/10.1126/sciadv.aeh0456" target="_blank" rel="noopener noreferrer">Sun et al., <i>Sci. Adv.</i> 2026</a>]. A complementary need is a predictive link from
+value. Recent work has addressed this variability through structural design and high-throughput testing. A complementary need is a predictive link from
 processing to microstructure to mechanical behavior that can be used to choose the processing itself.
 </p>
 <p>
 This direction develops <strong>mechanics-guided manufacturing</strong> in two steps. The first is understanding:
 mechanics-based characterization and predictive models that connect process parameters to microstructure, and
-microstructure to constitutive behavior, building on the models of the first direction with microstructural variables
-such as crystallinity, molecular weight, and the morphology of minor phases. For printed polymers, these models describe
+microstructure to constitutive behavior, extending the models of the first direction to include microstructural
+variables such as crystallinity, molecular weight, and the morphology of minor phases. For printed polymers, these models describe
 how the composition field, the light dose, and the printing path set the local constitutive behavior, process-induced
 anisotropy, and the mechanical behavior of interfaces between dissimilar materials. For recycled polymers, starting with
 <strong>post-consumer polyolefins</strong>, they describe how melt-processing conditions shape the morphology of minor
 polymer phases and contaminants, and how that morphology governs stiffness, strength, ductility, and anisotropy. The
 second step is to <strong>invert these relations, from a target performance to the process</strong>: to select printing
 parameters that realize the designs of the second direction as manufactured parts with predictable properties, and to
-choose melt-processing conditions that turn the contaminants of a recycled feedstock into a benign morphology. In the same
+choose melt-processing conditions that turn the contaminants of a recycled feedstock into a morphology that preserves ductility. In the same
 framework, a recycled batch could be <strong>qualified from a small set of routine measurements</strong>, such as
 calorimetry, microscopy, and rheometry, and its processing adjusted to that batch.
 </p>
@@ -342,8 +342,8 @@ construction, and packaging components, reducing the demand for virgin resin and
 economy. For printed polymers, it would allow graded and multimaterial components to be manufactured with the reliability
 required in protective, aerospace, and biomedical applications. Aging in service under heat and ultraviolet light, which
 alters the molecular structure through chain scission and crosslinking, can be described with the same microstructural
-variables, and the same printing processes produce the specimen libraries for the high-throughput characterization of the
-first direction.
+variables. In addition, the same printing processes produce the specimen libraries for the high-throughput
+characterization of the first direction.
 </p>
 <p>
 This direction builds on my experience with both printed and recycled polymers. As an undergraduate, I designed and
