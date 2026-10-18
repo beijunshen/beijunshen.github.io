@@ -156,19 +156,24 @@ and design. Polymers undergo large, nonlinear deformation, and their viscoelasti
 loading rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture,
 and other environmental conditions. Constitutive models for such behavior are typically developed and calibrated for one
 material at a time, a practice that limits how quickly new materials reach engineering use. Data-driven methods have
-accelerated the identification of constitutive models, but most have addressed hyperelastic behavior; time- and
-history-dependent behavior has received less attention, particularly at the large, nonlinear deformations that polymers
-undergo in service. Models represented as general-purpose functions also offer limited physical interpretation.
+accelerated the identification of constitutive models, but most have addressed hyperelastic behavior, in which the stress
+depends only on the current deformation. Time- and history-dependent behavior is considerably more challenging, because the
+stress depends on the history of deformation through internal variables: both the constitutive relations and the evolution
+laws of these variables must be identified, from data that span a range of loading rates and temperatures. The difficulty
+is greatest at the large, nonlinear deformations that many polymeric components undergo in service. Models represented by
+neural networks or other general-purpose function approximators also offer limited physical interpretation.
 </p>
 <p>
 This direction differs in three respects. First, it addresses <strong>time- and history-dependent behavior at large,
 nonlinear deformation</strong>, including viscoelasticity and viscoplasticity through the glass transition. Second, it
 seeks <strong>one physics-based model for an entire family of polymers</strong>, in which composition, crosslink density,
 or processing conditions enter as variables, in place of one model per material. Third, it <strong>combines physical
-insight with machine learning</strong>, including symbolic regression, to identify the governing deformation mechanisms,
-such as network stretching, reptation, and glassy yield, and the evolution of the microstructure that accompanies them,
-such as molecular alignment, structural relaxation, and changes in crosslink density, together with closed-form
-expressions for each. The resulting models remain interpretable and can be implemented directly in finite-element codes.
+insight with machine learning</strong>, including symbolic regression, to identify the governing physical mechanisms, such
+as entropic stretching of the molecular network, intermolecular resistance to yielding in the glassy state, and molecular
+relaxation by reptation, together with internal variables that describe how the microstructure evolves with deformation
+and environmental exposure, such as molecular orientation, free volume, and crosslink density. Closed-form expressions are
+sought for both the constitutive relations and the evolution laws of these internal variables, so that the resulting
+models remain interpretable and thermodynamically consistent and can be implemented directly in finite-element codes.
 </p>
 <p>
 Models of this kind require data that span composition, processing, loading, and environmental conditions, and collecting
