@@ -162,11 +162,21 @@ transition. It seeks <strong>one physics-based model for an entire family of pol
 crosslink density, or processing conditions enter as variables, in place of one model per material. And it
 <strong>combines physical insight with machine learning</strong>, including symbolic regression, to identify the governing
 mechanisms, such as network stretching, reptation, and glassy yield, and a closed-form expression for each, so that the
-resulting models remain interpretable and can be implemented directly in finite-element codes. Once a model is established
-for a family, the behavior of a new member can be predicted from a small number of calibration tests. The long-term goal is
-an <strong>open library of physics-based constitutive models</strong>, organized by mechanism, that can be extended to new
-polymer families as they are introduced.
+resulting models remain interpretable and can be implemented directly in finite-element codes.
 </p>
+<p>
+Models of this kind require data that span composition, processing conditions, temperature, and loading rate, and
+collecting such data one specimen at a time is slow. This direction therefore develops <strong>high-throughput
+characterization</strong> for polymer families: specimen libraries printed with systematically varied composition or
+processing conditions, automated mechanical testing across strain rates and temperatures, and graded specimens in which
+full-field strain measurement captures the response of many compositions in a single test. Machine learning can then guide
+the choice of subsequent experiments, so that each new test adds as much information to the model as possible. Once a model
+is established for a family, the behavior of a new member can be predicted from a small number of calibration tests. The
+long-term goal is an <strong>open library of physics-based constitutive models</strong>, organized by mechanism, that can
+be extended to new polymer families as they are introduced.
+</p>
+<p class="apps"><strong>Applications:</strong> high-throughput characterization of new and printed polymers; predictive
+simulation of polymeric components across loading rates and temperatures; design of graded and multimaterial parts.</p>
 <p>
 This direction builds on my postdoctoral work on digitally mixed polymers, printed voxel by voxel from a rubbery and a glassy
 photopolymer. Combining large-deformation compression tests over three orders of magnitude in strain rate with dynamic
@@ -180,8 +190,6 @@ collaborative study on the same materials used data-driven methods to discover c
 learning. The next family I will study is photopolymers cured by digital light processing, in which the light dose sets
 the crosslink density.
 </p>
-<p class="apps"><strong>Applications:</strong> rapid characterization of new and printed polymers; predictive simulation of
-polymeric components across loading rate and temperature; design of graded and multimaterial parts.</p>
 <div class="figrow">
     <figure>
         <img src="images/research/ttce_concept.jpg" alt="Schematic of time-temperature-composition equivalence" loading="lazy">
@@ -226,6 +234,8 @@ polymers with a designed rate-dependent response are also relevant to soft biome
 long-term goal is a set of <strong>design principles</strong> that relate material and structural time scales, and a
 design tool that translates a required response over time into composition and geometry.
 </p>
+<p class="apps"><strong>Applications:</strong> impact protection; deployable aerospace structures; vibration damping; soft robots
+with timed gripping and locomotion; multifunctional load-bearing structures; soft biomedical components.</p>
 <p>
 This direction builds on my doctoral research on architected lattices made of liquid crystal elastomers. Combining
 finite-element simulations based on viscoelastic constitutive models with experiments, I showed that viscoelasticity
@@ -237,8 +247,6 @@ stretching and beam bending were activated in sequence, and this sequential acti
 Engineering Science Annual Technical Meeting, designs fiber networks for energy storage and dissipation through
 multimaterial 3D printing of viscoelastic polymers.
 </p>
-<p class="apps"><strong>Applications:</strong> impact protection; deployable aerospace structures; vibration damping; soft robots
-with timed gripping and locomotion; multifunctional load-bearing structures; soft biomedical components.</p>
 <div class="figrow">
     <figure>
         <img src="images/research/adma_sim.jpg" alt="Finite-element simulations of stacked liquid crystal elastomer layers" loading="lazy">
@@ -270,20 +278,24 @@ multimaterial 3D-printed and recycled polymers.</p>
 Manufacturing and processing determine the microstructure on which the first two directions depend: the composition placed
 voxel by voxel in multimaterial 3D printing, the crosslink density set by the light dose in digital light processing, and
 the morphology of blends and recyclates formed during melt processing. For printed polymers, this direction connects
-printing parameters, such as the composition field and the light dose, to the resulting constitutive behavior, so that the
-models of the first direction and the designs of the second can be realized as physical parts.
+printing parameters, such as the composition field and the light dose, to the resulting microstructure and constitutive
+behavior, including process-induced anisotropy and the behavior of interfaces between materials, so that the models of the
+first direction and the designs of the second can be realized as physical parts. The same printing routes produce the
+specimen libraries used for high-throughput characterization in the first direction.
 </p>
 <p>
-For recycled polymers, the focus is on <strong>post-consumer polyolefins</strong>, which are rarely used in demanding
-structural applications, largely because their contaminants and processing histories vary from batch to batch. This
-direction develops characterization methods and predictive tools, including constitutive models, that relate processing
-conditions to the size, shape, and continuity of contaminant domains, to crystallinity and molecular weight, and to the
-resulting anisotropic mechanical response. These relations can guide the choice of processing conditions and could allow a
+For recycled polymers, this direction starts with <strong>post-consumer polyolefins</strong>, which make up a large share
+of plastic waste but are rarely used in demanding structural applications, largely because their contaminants and
+processing histories vary from batch to batch. It develops characterization methods and predictive tools, including
+constitutive models, that relate processing conditions to the morphology of contaminant and blend phases, to crystallinity
+and molecular weight, and to the resulting mechanical response, including its anisotropy. These relations can guide the choice of processing conditions and could allow a
 batch to be <strong>qualified from a small set of standard measurements</strong>, such as calorimetry, microscopy, and
 rheometry. The same methods and models can be extended to aging in service, which proceeds through chain scission and
 crosslinking. The long-term goal is to support the upcycling of plastic waste into load-bearing products and a more
 circular plastics economy, with processing and manufacturing chosen on the basis of predicted mechanical performance.
 </p>
+<p class="apps"><strong>Applications:</strong> load-bearing parts from recycled plastics; processing design for the upcycling
+of plastic waste; graded and multimaterial components made by 3D printing.</p>
 <p>
 This direction builds on my experience with both printed and recycled polymers. As an undergraduate, I designed and developed a <strong>multi-axis
 rotary 3D printer</strong> for curved-layer fused deposition modeling, and at Columbia I design and print voxel-graded
@@ -294,8 +306,6 @@ orientation, govern the anisotropic ductility, and that films extruded with a la
 restacks the melt, had <strong>approximately twice the transverse ductility</strong> and matched the performance of virgin
 material with the same polyethylene content.
 </p>
-<p class="apps"><strong>Applications:</strong> load-bearing parts from recycled plastics; processing design for the upcycling
-of plastic waste; graded and multimaterial components made by 3D printing.</p>
 <figure class="wide">
     <img src="images/research/pes_ga.jpg" alt="Graphical abstract of the recycled polypropylene film study" loading="lazy">
     <figcaption>Elongation at break as a function of polyethylene content for recycled and virgin films, with and without a
