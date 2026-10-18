@@ -60,17 +60,21 @@
 <section>
 <h1>Research</h1>
 <p>
-My research lies at the intersection of solid mechanics, polymeric materials, and advanced manufacturing. It establishes
-predictive relationships among <strong>processing, microstructure, time-dependent mechanical behavior, and structural
-performance</strong>, and uses them to design and manufacture polymeric materials and structures for resilient and
-sustainable engineered systems. The work spans the <strong>life cycle of a polymeric part</strong>: design and manufacture
-for a prescribed response, reliable performance over time in service, and recycling into new load-bearing use.
+Polymeric materials and structures often undergo large deformation, respond differently at different rates and
+temperatures, and change with how they are made, used, and recycled. My research lies at the intersection of solid
+mechanics, polymeric materials, and advanced manufacturing. It establishes predictive relationships among
+<strong>processing, microstructure, time-dependent mechanical behavior, and structural performance</strong>, and uses them
+to design and manufacture polymeric materials and structures for resilient and sustainable engineered systems. The work
+spans the <strong>life cycle of a polymeric part</strong>: design and manufacture for a prescribed response, reliable
+performance over time in service, and recycling into new load-bearing use.
 </p>
 <p>
-The research is organized in three connected directions, each combining experiment, theory, and computation. The experiments
-include large-deformation mechanical testing across strain rates and temperatures, dynamic mechanical analysis, and digital
-image correlation; the theory and computation include constitutive modeling, finite-element simulation with user-defined
-material models, and machine learning; and multimaterial 3D printing produces many of the materials and structures studied.
+The research is organized in three connected directions. The first provides physics-based constitutive models for
+families of polymers; the second uses these models to design structures whose response over time is prescribed; and the
+third links both to processing and manufacturing. Each direction combines experiment, theory, and computation:
+large-deformation mechanical testing across strain rates and temperatures, dynamic mechanical analysis, and digital image
+correlation; constitutive modeling, finite-element simulation with user-defined material models, and machine learning; and
+multimaterial 3D printing, which produces many of the materials and structures studied.
 </p>
 <p>
 Together, the three directions form a <strong>predictive digital twin</strong> of polymeric materials and structures. The
@@ -152,8 +156,8 @@ components to biomedical devices and the load-bearing use of recycled plastics.
 insight with machine learning and validated by high-throughput characterization.</p>
 <p>
 Constitutive models relate the stress in a material to its deformation history, and they underpin finite-element analysis
-and engineering design. For polymers, deformation is large and nonlinear, and the response depends strongly on loading
-rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture, and
+and engineering design. Polymers often undergo large, nonlinear deformation, and their response depends strongly on
+loading rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture, and
 other environmental conditions. Models that capture this behavior are typically formulated by experts for one material at
 a time, through repeated cycles of refinement and calibration, a practice that slows the adoption of new polymers. Data-driven
 methods promise to accelerate this process, but most have addressed either hyperelastic behavior at large deformation or
@@ -181,7 +185,10 @@ these models. Multimaterial 3D printing can produce specimen libraries in which 
 systematically, as well as graded specimens in which full-field strain measurement captures the response of many
 compositions in a single test. These specimens are tested at large deformation under controlled loading and environmental
 conditions, so that the data inform the mechanisms of the model as well as its parameters. Machine learning then selects the
-experiments that are most informative for the next refinement. The long-term goal is an open library with which the
+experiments that are most informative for the next refinement.
+</p>
+<p>
+The long-term goal is an open library with which the
 constitutive behavior of a new polymer family, or of a known family under new environmental conditions, can be
 established from a small number of tests. Such a library would shorten the development and qualification of new polymers,
 enable predictive simulation of polymeric components in protective equipment, aerospace structures, medical devices, and
