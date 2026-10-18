@@ -232,40 +232,47 @@ learning.
 
 <section class="thrust" id="design">
 <h2>2. Programming Structures in Time</h2>
-<p class="lead">Co-design of the intrinsic time scales of the material and the time scales of the structure, to control
-how quickly and in what sequence a structure responds to mechanical loads or external stimuli and to realize prescribed
+<p class="lead">Co-design of the time scales of the material and those of the structural response, to control how
+quickly and in what sequence a structure responds to mechanical loads or environmental stimuli and to realize prescribed
 functions over time.</p>
 <p>
-The function of architected structures often relies on geometric nonlinearity, such as buckling, snap-through, and folding,
-yet these structures are commonly designed with the material idealized as linear elastic or hyperelastic. A polymeric
-structure involves two sets of time scales: those of the material, set by how quickly it relaxes, and those of the
-structure, such as the rate at which an instability develops and the time required for a deformed region to recover.
-Whether a region responds in a rubbery or a glassy manner during an instability <strong>depends on how these two time
-scales compare</strong>. This direction studies how they interact and how they can be designed together, so that the
-<strong>speed and sequence of the structural response</strong> to a load or to an environmental stimulus, such as heat,
-light, or moisture, become design targets. In a multimaterial structure, the local material sets the local relaxation
-behavior, and the geometry determines how relaxation translates into load transfer, buckling, and recovery. Target functions include impact
-protection with energy absorption tailored to the range of impact speeds a structure must withstand, deployable structures
-that unfold in a prescribed sequence, vibration damping over a chosen frequency range, timed gripping and locomotion in
-soft robots, and multifunctional structures that carry load while dissipating energy or recovering their shape. Graded
-polymers with a designed rate-dependent response are also relevant to soft biomedical components such as implants. The
-long-term goal is a set of <strong>design principles</strong> that relate material and structural time scales, together
-with computational design tools, built on the constitutive models of the first direction, that translate a required
-response over time into the distribution of materials and the geometry of a structure.
+The function of architected structures often relies on elastic instabilities, such as buckling and snap-through, and on
+other large, geometrically nonlinear deformations, such as folding. These structures are commonly designed with the
+material idealized as linear elastic or hyperelastic, an idealization that omits the rate and history dependence of
+polymeric materials. A polymeric structure involves two sets of time scales: those of the material, characterized by its
+relaxation times, and those of the structural response, set by the duration of loading and by the speed at which an
+instability develops. Whether a region of the structure responds in a relaxed, rubbery manner or in an unrelaxed, glassy
+manner <strong>depends on how these two sets of time scales compare</strong>. This direction studies how they interact and
+how they can be designed together, so that the <strong>speed and sequence of the structural response</strong> to a load or
+to an environmental stimulus, such as heat, light, or moisture, become design targets. In a multimaterial structure, the
+local material sets the local relaxation behavior, and the geometry determines how relaxation translates into load
+transfer, buckling, and recovery. Delayed and partial recovery of deformed regions can likewise be designed, for example
+to hold a deformed configuration and release it after a prescribed time.
+</p>
+<p>
+Target functions include impact protection with energy absorption tailored to the range of impact speeds a structure must
+withstand, deployable structures that unfold in a prescribed sequence, vibration damping over a chosen frequency range,
+timed gripping and locomotion in soft robots, and multifunctional structures that carry load while dissipating energy or
+recovering their shape. Graded polymers with a designed rate-dependent response are also relevant to soft biomedical
+devices such as implants. The long-term goal is a set of <strong>design principles</strong> that relate material and
+structural time scales, together with computational design tools, built on the constitutive models of the first
+direction, that translate a required response over time into the distribution of materials and the geometry of a
+structure.
 </p>
 <p class="apps"><strong>Applications:</strong> impact protection for people, vehicles, and equipment; deployable
 structures for aerospace; vibration damping; soft robots with timed gripping and locomotion; multifunctional load-bearing
 structures; soft biomedical devices.</p>
 <p>
 This direction builds on my doctoral research on architected lattices made of liquid crystal elastomers. Combining
-finite-element simulations based on viscoelastic constitutive models with experiments, I showed that viscoelasticity
-changes how stacked layers buckle: nonuniformly at a low strain rate and simultaneously at a high strain rate. The interplay
-of nonlinear viscoelasticity and snap-through caused buckled layers to <strong>recover locally and partially</strong>, a
-path-dependent response that increased energy absorption. In a subsequent lattice design with a stretchable bar, bar
-stretching and beam bending were activated in sequence, and this sequential activation increased energy absorption by
-<strong>up to 2.5 times</strong> relative to a design with a rigid bar. My ongoing work, presented at the 2026 Society of
-Engineering Science Annual Technical Meeting, designs fiber networks for energy storage and dissipation through
-multimaterial 3D printing of viscoelastic polymers.
+finite-element simulations based on viscoelastic constitutive models with experiments, I showed that, because of the
+viscoelasticity of the material, the buckling sequence of stacked layers depends on the strain rate: the layers buckled
+nonuniformly at a low strain rate and simultaneously at a high strain rate. The interplay of nonlinear viscoelasticity and
+snap-through caused buckled layers to <strong>recover locally and partially</strong>, a path-dependent response that
+increased energy absorption. In a subsequent study, I added a stretchable liquid crystal elastomer bar to the unit cell of
+the lattice, so that bar stretching and beam bending were activated in sequence; this sequential activation increased
+energy absorption by <strong>up to 2.5 times</strong> relative to a design with a rigid bar. In ongoing work, presented at
+the 2026 Society of Engineering Science Annual Technical Meeting, I am designing fiber networks that store and dissipate
+energy, using multimaterial 3D printing of viscoelastic polymers.
 </p>
 <div class="figrow">
     <figure>
@@ -294,40 +301,43 @@ multimaterial 3D printing of viscoelastic polymers.
 
 <section class="thrust" id="manufacturing">
 <h2>3. Advanced and Sustainable Manufacturing</h2>
-<p class="lead">Mechanics-based characterization and modeling of processing&ndash;structure&ndash;property relations, for
+<p class="lead">Mechanics-based characterization and modeling of processing&ndash;structure&ndash;property relations for
 multimaterial 3D-printed and recycled polymers.</p>
 <p>
-Manufacturing and processing determine the microstructure on which the first two directions depend: the composition placed
-voxel by voxel in multimaterial 3D printing, the crosslink density set by the light dose in digital light processing, and
-the morphology of blends and recyclates formed during melt processing. For printed polymers, this direction connects
-printing parameters, such as the composition field and the light dose, to the resulting microstructure and constitutive
-behavior, including process-induced anisotropy and the behavior of interfaces between materials, so that the models of the
-first direction and the designs of the second can be realized as physical parts. The same printing routes produce the
+Manufacturing and processing determine the microstructure on which the constitutive models of the first direction and the
+designs of the second depend: the composition placed voxel by voxel in multimaterial 3D printing, the crosslink density set
+by the light dose in digital light processing, and the morphology, crystallinity, and molecular orientation of blends and
+recycled polymers formed during melt processing. For printed polymers, this direction connects printing parameters, such as
+the composition field and the light dose, to the resulting microstructure and constitutive behavior, including
+process-induced anisotropy and the mechanical behavior of interfaces between dissimilar materials, so that the models and
+designs can be realized as manufactured parts with predictable properties. The same printing processes produce the
 specimen libraries used for high-throughput characterization in the first direction.
 </p>
 <p>
 For recycled polymers, this direction starts with <strong>post-consumer polyolefins</strong>, which make up a large share
-of plastic waste but are rarely used in demanding structural applications, largely because their contaminants and
-processing histories vary from batch to batch. It develops characterization methods and predictive tools, including
-constitutive models, that relate processing conditions to the morphology of contaminant and blend phases, to crystallinity
-and molecular weight, and to the resulting mechanical response, including its anisotropy. These relations can guide the choice of processing conditions and could allow a
-batch to be <strong>qualified from a small set of standard measurements</strong>, such as calorimetry, microscopy, and
-rheometry. The same methods and models can be extended to aging in service under heat, light, and moisture, which alters
-the polymer through chain scission and crosslinking. The long-term goal is to support the upcycling of plastic waste into load-bearing products and a more
-circular plastics economy, with processing and manufacturing chosen on the basis of predicted mechanical performance.
+of plastic waste but are rarely used in demanding structural applications, largely because their composition,
+contamination, and thermomechanical history vary from batch to batch. It develops characterization methods and predictive
+tools, including constitutive models, that relate processing conditions to the microstructure, including the morphology of
+minor polymer phases and contaminants, crystallinity, and molecular weight, and relate the microstructure to the resulting
+mechanical response, including its anisotropy. These relations can guide the choice of processing conditions and could
+allow a batch to be <strong>qualified from a small set of routine measurements</strong>, such as calorimetry, microscopy,
+and rheometry. The same methods and models can be extended to aging in service under heat and ultraviolet light, which
+alters the molecular structure through chain scission and crosslinking. The long-term goal is to support the upcycling of
+plastic waste into load-bearing products and a more circular plastics economy, with processing and manufacturing chosen on
+the basis of predicted mechanical performance.
 </p>
 <p class="apps"><strong>Applications:</strong> load-bearing products from recycled plastics, such as automotive,
 construction, and packaging components; rapid quality screening of recycled feedstocks; processing design for the
 upcycling of plastic waste; graded and multimaterial components made by additive manufacturing.</p>
 <p>
-This direction builds on my experience with both printed and recycled polymers. As an undergraduate, I designed and developed a <strong>multi-axis
-rotary 3D printer</strong> for curved-layer fused deposition modeling, and at Columbia I design and print voxel-graded
-polymer structures. In my doctoral research, I characterized films extruded from post-consumer polypropylene to establish
-their processing&ndash;structure&ndash;property relations. Combining calorimetry, electron microscopy, rheometry, tensile
-testing, and X-ray scattering, I showed that polyethylene domains drawn into elongated striations, rather than lamellar
-orientation, govern the anisotropic ductility, and that films extruded with a layer-multiplying element, which splits and
-restacks the melt, had <strong>approximately twice the transverse ductility</strong> and matched the performance of virgin
-material with the same polyethylene content.
+This direction builds on my experience with both printed and recycled polymers. As an undergraduate, I designed and
+developed a <strong>multi-axis rotary 3D printer</strong> for curved-layer fused deposition modeling, and at Columbia I
+design and print voxel-graded polymer structures. In my doctoral research, I characterized films extruded from
+post-consumer polypropylene to establish their processing&ndash;structure&ndash;property relations. Combining calorimetry,
+electron microscopy, rheometry, tensile testing, and X-ray scattering, I showed that polyethylene domains drawn into
+elongated striations govern the anisotropic ductility of these films. Films extruded with a layer-multiplying element,
+which splits and restacks the melt, had <strong>approximately twice the transverse ductility</strong> and matched the
+ductility of virgin material with the same polyethylene content.
 </p>
 <figure class="wide">
     <img src="images/research/pes_ga.jpg" alt="Graphical abstract of the recycled polypropylene film study" loading="lazy">
