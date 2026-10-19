@@ -73,12 +73,11 @@ performance over time in service, and recycling into new load-bearing use.
 The research is organized in three connected directions. The first provides physics-based constitutive models for
 families of polymers; the second uses these models to design structures whose response over time is prescribed; and the
 third links both to processing and manufacturing. Each direction combines experiment, theory, and computation. The experiments
-include mechanical characterization at large deformation across strain rates and temperatures, with dynamic mechanical
-analysis and digital image correlation, and characterization of microstructure and molecular structure by calorimetry,
-electron microscopy, X-ray scattering, and rheometry. The theory and computation include constitutive modeling,
+include mechanical characterization at large deformation across strain rates and temperatures, supported by dynamic
+mechanical analysis and digital image correlation, as well as characterization of microstructure and molecular structure
+by calorimetry, electron microscopy, X-ray scattering, and rheometry. The theory and computation include constitutive modeling,
 finite-element simulation with user-defined material models, and machine learning. Multimaterial 3D printing produces many
-of the materials and structures studied. Because multimaterial
-printing sets the composition, and hence the mechanical behavior, of a material voxel by voxel, <strong>the same platform serves to calibrate the models, realize the designs, and test the
+of the materials and structures studied. Because it sets the composition, and hence the mechanical behavior, of a material voxel by voxel, <strong>the same platform serves to calibrate the models, realize the designs, and test the
 predictions</strong>.
 </p>
 <p>
@@ -86,9 +85,9 @@ Together, the three directions form a <strong>predictive digital twin</strong> o
 digital twin supports <strong>forward prediction</strong>, from processing to structural performance, and <strong>inverse
 design</strong>, from a target performance to the structural design, constituent material, and processing route that
 achieve the target. Measurements on printed and recycled materials and on manufactured structures, in turn, refine the
-constitutive models. The applications range from impact protection, deployable aerospace structures, and infrastructure
-components to structures that operate under extreme temperatures, loading rates, and ultraviolet exposure, biomedical
-devices, and the load-bearing use of recycled plastics.
+constitutive models. The applications include impact protection, deployable aerospace structures, infrastructure components,
+biomedical devices, the load-bearing use of recycled plastics, and structures exposed to extreme temperatures, high
+loading rates, or intense ultraviolet light.
 </p>
 <figure class="concept-fig">
 <svg class="concept" viewBox="0 0 1076 984" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research overview. Core: mechanics and advanced manufacturing of polymeric materials and structures. Three connected directions: physics-based constitutive discovery, programming structures in time, and advanced and sustainable manufacturing. Applications: safety, infrastructure, space, extreme environments, sustainability, and health.">
@@ -178,8 +177,8 @@ point adds cost to large-scale finite-element simulations.
 This direction has two parts. The first is a <strong>modular library of physics-based constitutive models</strong>
 for polymer families. Each
 module represents one physical mechanism, such as entropic stretching of the molecular network, intermolecular resistance
-to yielding in the glassy state, or molecular relaxation by reptation, together with internal variables that describe how
-the microstructure evolves with deformation and environmental exposure, such as molecular orientation, crystallinity, and crosslink density. Composition, crosslink density, and processing conditions enter the modules as variables, so that
+to yielding in the glassy state, or molecular relaxation by reptation, together with internal variables, such as molecular orientation, crystallinity, and crosslink density, that
+describe how the microstructure evolves with deformation and environmental exposure. Composition and processing conditions enter the modules as variables, so that
 <strong>one model describes an entire family of polymers</strong> at large, nonlinear deformation and across loading
 rates, temperatures, and environmental conditions. Physical insight is combined with machine learning, including symbolic
 regression, to identify closed-form expressions for the constitutive relations and for the evolution laws of the internal
