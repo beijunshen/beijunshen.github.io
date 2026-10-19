@@ -75,8 +75,8 @@ families of polymers; the second uses these models to design structures whose re
 third links both to processing and manufacturing. Each direction combines experiment, theory, and computation:
 large-deformation mechanical testing across strain rates and temperatures, dynamic mechanical analysis, and digital image
 correlation; constitutive modeling, finite-element simulation with user-defined material models, and machine learning; and multimaterial 3D printing, which produces many of the materials and structures studied. Because multimaterial
-printing sets the composition, and hence the mechanical behavior, of a material voxel by voxel, the same platform serves to
-calibrate the models, realize the designs, and test the predictions.
+printing sets the composition, and hence the mechanical behavior, of a material voxel by voxel, <strong>the same platform serves to calibrate the models, realize the designs, and test the
+predictions</strong>.
 </p>
 <p>
 Together, the three directions form a <strong>predictive digital twin</strong> of polymeric materials and structures. The
@@ -160,8 +160,7 @@ insight with machine learning and validated by high-throughput characterization.
 Constitutive models relate the stress in a material to its deformation history, and they underpin finite-element analysis
 and engineering design. Polymers often undergo large, nonlinear deformation, and their response depends strongly on
 loading rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture, and
-other environmental conditions. Models that capture this behavior are typically formulated by experts for one material at
-a time, through repeated cycles of refinement and calibration, a practice that slows the adoption of new polymers. Data-driven
+other environmental conditions. Models that capture this behavior are typically formulated by experts <strong>for one material at a time</strong>, through repeated cycles of refinement and calibration, a practice that slows the adoption of new polymers. Data-driven
 methods promise to accelerate this process, but most have addressed either hyperelastic behavior at large deformation or
 history-dependent behavior at small strain; the large, rate- and temperature-dependent deformation of polymers in
 service has received comparatively little attention. Neural-network models also involve many parameters and hyperparameters that have little physical meaning. Because
@@ -195,7 +194,7 @@ well as its parameters, and machine learning selects the next most informative e
 <p>
 The long-term goal is an open library with which the
 constitutive behavior of a new polymer family, or of a known family under new environmental conditions, can be
-established from a small number of tests. Such a library would shorten the development and qualification of new polymers,
+<strong>established from a small number of tests</strong>. Such a library would shorten the development and qualification of new polymers,
 enable predictive simulation of polymeric components in protective equipment, aerospace structures, medical devices, and
 soft robots, including the changes in their behavior with environmental exposure, and supply the material descriptions
 for the multimaterial designs of the second direction.
@@ -204,7 +203,7 @@ for the multimaterial designs of the second direction.
 This direction builds primarily on my postdoctoral work on digitally mixed polymers, in which an elastomeric and a glassy
 photopolymer are mixed voxel by voxel through multimaterial 3D printing. From dynamic mechanical analysis of compositions
 spanning the family, I extended the classical time&ndash;temperature equivalence, a cornerstone of polymer
-viscoelasticity for seventy years, to a <strong>time&ndash;temperature&ndash;composition equivalence</strong>
+viscoelasticity for seventy years, to a much more general <strong>time&ndash;temperature&ndash;composition equivalence</strong>
 [<a href="https://doi.org/10.48550/arXiv.2610.14986" target="_blank" rel="noopener noreferrer">Shen, Kumar, and Boyce, arXiv 2026</a>]. The storage modulus of every composition, at every temperature and frequency, collapses onto one master
 curve; the phase angle and the relaxation spectrum superpose in the same way, so the family shares one distribution of
 relaxation times. A single closed form then gives the <strong>stiffness and damping of the entire family across
@@ -266,12 +265,12 @@ has two parts. The first establishes how geometry converts the relaxation of the
 events, such as the transfer of load between regions, the onset of buckling, and recovery, including delayed and partial recovery. The second uses multimaterial 3D
 printing to set the relaxation behavior region by region, with the constitutive models of the first direction relating
 composition to relaxation behavior, so that the material and the geometry of a structure are chosen together. Combining
-finite-element simulation, machine learning, and experiments, this direction aims at <strong>design principles</strong>
-that relate material and structural time scales and at computational design tools that translate a required response
+finite-element simulation, machine learning, and experiments, this direction aims at <strong>design principles
+that relate material and structural time scales</strong> and at computational design tools that translate a required response
 over time into the distribution of materials and the geometry of a structure.
 </p>
 <p>
-Such structures would enable impact protection for people, vehicles, and equipment with energy absorption tailored to the
+Structures designed in this way would enable impact protection for people, vehicles, and equipment with energy absorption tailored to the
 range of expected impact speeds; deployable aerospace structures that unfold in a prescribed sequence, including after
 long-term storage; vibration damping over a chosen frequency range; soft robots whose gripping and locomotion are timed by
 the material; and multifunctional load-bearing structures that dissipate energy or recover their shape, without sensors or
@@ -312,10 +311,10 @@ materials and structures.
 <p class="rel-label">Relevant Publications</p>
 <ul class="rel">
     <li><strong>B. Shen</strong><sup>*</sup>, Y. Jiang, C. M. Yakacki, S. H. Kang<sup>*</sup>, T. D. Nguyen. <a href="https://doi.org/10.1016/j.jmps.2025.106497" target="_blank" rel="noopener noreferrer">Combining stretching-dominated and bending-dominated dissipation behavior to optimize energy absorption in liquid crystal elastomer-based lattice structures</a>. <i>Journal of the Mechanics and Physics of Solids</i>, 209, 106497 (2026).</li>
-    <li>S.-Y. Jeon<sup>+</sup>, <strong>B. Shen</strong><sup>+</sup>, N. A. Traugutt, Z. Zhu, L. Fang, C. M. Yakacki, T. D. Nguyen, S. H. Kang<sup>*</sup>. <a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Synergistic energy absorption mechanisms of architected liquid crystal elastomers</a>. <i>Advanced Materials</i>, 34(14), 2200272 (2022). (<sup>+</sup>equal contribution)</li>
     <li>N. Hertlein, <strong>B. Shen</strong>, S. H. Kang, P. R. Buskohl<sup>*</sup>. <a href="https://doi.org/10.1115/DETC2023-116617" target="_blank" rel="noopener noreferrer">Computational analysis of buckling-based stiffness programming of liquid crystal elastomer beams</a>. <i>ASME International Design Engineering Technical Conferences (IDETC)</i>, V008T08A040 (2023).</li>
-    <li><strong>B. Shen</strong>, O. Erol, L. Fang, S. H. Kang<sup>*</sup>. <a href="https://iopscience.iop.org/article/10.1088/2399-7532/ab54ea/meta" target="_blank" rel="noopener noreferrer">Programming the time into 3D printing: current advances and future directions in 4D printing</a>. <i>Multifunctional Materials</i>, 3(1), 012001 (2020).</li>
+    <li>S.-Y. Jeon<sup>+</sup>, <strong>B. Shen</strong><sup>+</sup>, N. A. Traugutt, Z. Zhu, L. Fang, C. M. Yakacki, T. D. Nguyen, S. H. Kang<sup>*</sup>. <a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Synergistic energy absorption mechanisms of architected liquid crystal elastomers</a>. <i>Advanced Materials</i>, 34(14), 2200272 (2022). (<sup>+</sup>equal contribution)</li>
     <li><strong>B. Shen</strong>, S. H. Kang<sup>*</sup>. <a href="https://doi.org/10.1016/j.matt.2021.02.011" target="_blank" rel="noopener noreferrer">Designing self-oscillating matter</a>. <i>Matter</i>, 4(3), 766–769 (2021).</li>
+    <li><strong>B. Shen</strong>, O. Erol, L. Fang, S. H. Kang<sup>*</sup>. <a href="https://iopscience.iop.org/article/10.1088/2399-7532/ab54ea/meta" target="_blank" rel="noopener noreferrer">Programming the time into 3D printing: current advances and future directions in 4D printing</a>. <i>Multifunctional Materials</i>, 3(1), 012001 (2020).</li>
 </ul>
 </section>
 
@@ -332,8 +331,8 @@ variability compounds the difficulty. Post-consumer feedstocks differ from batch
 and thermomechanical history, so that polyolefins, the largest-volume plastics, are mostly downcycled into products of
 lower value. Recent work has made recycled plastics more usable by designing structures that tolerate this variability and
 by testing them at high throughput; in both approaches, the variability of the feedstock is taken as given. What is still
-missing, for printed and recycled polymers alike, is a quantitative link from processing to microstructure to mechanical
-behavior, with which processing could be chosen to reach a target performance and to reduce variability, instead of being
+missing, for printed and recycled polymers alike, is a <strong>quantitative link from processing to microstructure to mechanical
+behavior</strong>, with which processing could be chosen to reach a target performance and to reduce variability, instead of being
 tuned by trial and error.
 </p>
 <p>
@@ -343,12 +342,13 @@ microstructure to constitutive behavior, extending the models of the first direc
 variables such as crystallinity, molecular weight, and the morphology of minor phases. For printed polymers, these models describe
 how the composition field, the light dose, and the printing path set the local constitutive behavior, process-induced
 anisotropy, and the mechanical behavior of interfaces between dissimilar materials; the same printing processes produce
-the specimen libraries for the high-throughput characterization of the first direction. For recycled polymers, starting with
-<strong>post-consumer polyolefins</strong>, they describe how melt-processing conditions shape the morphology of minor
+the specimen libraries for the high-throughput characterization of the first direction. For recycled polymers, starting with post-consumer polyolefins, they describe how melt-processing conditions shape the morphology of minor
 polymer phases and contaminants, and how that morphology governs stiffness, strength, ductility, and anisotropy. The same microstructural variables
 describe aging in service under heat and ultraviolet light, which alters the molecular structure through chain scission
-and crosslinking. The
-second step is to <strong>invert these relations, from a target performance to the process</strong>: to select printing
+and crosslinking.
+</p>
+<p>
+The second step is to <strong>invert these relations, from a target performance to the process</strong>: to select printing
 parameters that realize the designs of the second direction as manufactured parts with predictable properties, and to
 choose melt-processing conditions that turn the contaminants of a recycled feedstock into a morphology that preserves ductility. In the same
 framework, a recycled batch could be <strong>qualified from a small set of routine measurements</strong>, such as
