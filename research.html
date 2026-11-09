@@ -76,7 +76,7 @@ third links processing, structure, and properties of recycled polymers to guide 
 include mechanical characterization at large deformation across strain rates and temperatures, supported by dynamic
 mechanical analysis and digital image correlation, as well as characterization of microstructure and molecular structure
 by calorimetry, electron microscopy, X-ray scattering, and rheometry. The theory and computation include constitutive modeling,
-finite-element simulation with user-defined material models, and machine learning. Multimaterial 3D printing produces many
+finite element simulation with user-defined material models, and machine learning. Multimaterial additive manufacturing produces many
 of the materials and structures studied. Because it sets the composition, and hence the mechanical behavior, of a material voxel by voxel, <strong>the same platform serves to calibrate the models, realize the designs, and test the
 predictions</strong>.
 </p>
@@ -84,13 +84,13 @@ predictions</strong>.
 Together, the three directions form a <strong>predictive digital twin</strong> of polymeric materials and structures. The
 digital twin supports <strong>forward prediction</strong>, from processing to structural performance, and <strong>inverse
 design</strong>, from a target performance to the structural design, constituent material, and processing route that
-achieve the target. Measurements on printed and recycled materials and on manufactured structures, in turn, refine the
+achieve the target. Measurements on additively manufactured and recycled materials and on manufactured structures, in turn, refine the
 constitutive models. The applications include impact protection, deployable aerospace structures, infrastructure components,
 biomedical devices, the load-bearing use of recycled plastics, and structures exposed to extreme temperatures, high
 loading rates, or intense ultraviolet light.
 </p>
 <figure class="concept-fig">
-<svg class="concept" viewBox="0 0 1086 1086" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research overview. Core: mechanics and advanced manufacturing of polymeric materials and structures, toward a predictive digital twin. Three connected directions: physics-based constitutive discovery, shown by the storage modulus of five printed compositions collapsing onto one master curve; spatiotemporal programming of structures, coupling geometric instability with material time scales; and sustainable manufacturing of recycled polymers, linking processing, structure, and properties to guide processing, shown by recycled pellets and coarse versus refined microstructure. Applications: safety, infrastructure, space, extreme environments, sustainability, and health.">
+<svg class="concept" viewBox="0 0 1086 1086" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research overview. Core: mechanics and advanced manufacturing of polymeric materials and structures, toward a predictive digital twin. Three connected directions: physics-based constitutive discovery, shown by the storage modulus of five compositions collapsing onto one master curve; spatiotemporal programming of structures, coupling geometric instability with material time scales; and sustainable manufacturing of recycled polymers, linking processing, structure, and properties to guide processing, shown by recycled pellets and coarse versus refined microstructure. Applications: safety, infrastructure, space, extreme environments, sustainability, and health.">
 <defs><marker id="lk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3a3a3a"/></marker><marker id="blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3f6fb5"/></marker><marker id="grn" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e7d4f"/></marker>
 <path id="dom0" d="M38.0,565.9 A505.5,505.5 0 0 1 207.4,165.0" fill="none"/>
 <path id="dom1" d="M195.0,176.3 A505.5,505.5 0 0 1 742.9,78.7" fill="none"/>
@@ -173,7 +173,7 @@ loading rates, or intense ultraviolet light.
 <p class="lead">Physics-based constitutive models for entire families of polymers, discovered by combining physical
 insight with machine learning and validated by high-throughput characterization.</p>
 <p>
-Constitutive models relate the stress in a material to its deformation history, and they underpin finite-element analysis
+Constitutive models relate the stress in a material to its deformation history, and they underpin finite element analysis
 and engineering design. Polymers often undergo large, nonlinear deformation, and their response depends strongly on
 loading rate and temperature, changes markedly through the glass transition, and evolves with exposure to light, moisture, and
 other environmental conditions. Models that capture this behavior are typically formulated by experts <strong>for one material at a time</strong>, through repeated cycles of refinement and calibration, a practice that slows the adoption of new polymers. Data-driven
@@ -182,7 +182,7 @@ history-dependent behavior at small strain; the large, rate- and temperature-dep
 service has received comparatively little attention. Neural-network models also involve many parameters and hyperparameters that have little physical meaning. Because
 few physical principles are built into them, they often extrapolate poorly beyond their training data and do not reveal
 the underlying mechanisms; they typically must be retrained for a new material; and evaluating them at every integration
-point adds cost to large-scale finite-element simulations.
+point adds cost to large-scale finite element simulations.
 </p>
 <p>
 This direction has two parts. The first is a <strong>modular library of physics-based constitutive models</strong>
@@ -194,15 +194,15 @@ describe how the microstructure evolves with deformation and environmental expos
 rates, temperatures, and environmental conditions. Physical insight is combined with machine learning, including symbolic
 regression, to identify closed-form expressions for the constitutive relations and for the evolution laws of the internal
 variables. The resulting models are interpretable and thermodynamically consistent, extrapolate more reliably beyond their
-calibration data, and are efficient in large-scale finite-element simulation; their modules can be recombined,
+calibration data, and are efficient in large-scale finite element simulation; their modules can be recombined,
 recalibrated, and transferred to new polymer families.
 </p>
 <p>
 The second part is <strong>high-throughput characterization</strong> to calibrate, validate, and refine these models much
 faster than testing one material at a time allows. Most high-throughput mechanical testing to date has measured a few
 scalar properties, such as modulus, hardness, or strength. Constitutive models of polymers require more: the full
-large-deformation response across loading rates, temperatures, and environmental conditions. This direction obtains that
-response at scale by combining specimen libraries printed with systematically varied composition or processing
+large deformation response across loading rates, temperatures, and environmental conditions. This direction obtains that
+response at scale by combining specimen libraries made with systematically varied composition or processing
 conditions; specimens designed to capture the response of many compositions in a single test; and automated testing under controlled loading and environmental conditions.
 Because the data are interpreted directly through physics-based models, they identify which mechanisms a model needs as
 well as its parameters, and machine learning selects the next most informative experiment.
@@ -217,17 +217,17 @@ for the multimaterial designs of the second direction.
 </p>
 <p>
 This direction builds primarily on my postdoctoral work on digitally mixed polymers, in which an elastomeric and a glassy
-photopolymer are mixed voxel by voxel through multimaterial 3D printing. From dynamic mechanical analysis of compositions
+photopolymer are mixed voxel by voxel in multimaterial additive manufacturing. From dynamic mechanical analysis of compositions
 spanning the family, I extended the classical time&ndash;temperature equivalence, a cornerstone of polymer
 viscoelasticity for seventy years, to a much more general <strong>time&ndash;temperature&ndash;composition equivalence</strong>
 [<a href="https://doi.org/10.48550/arXiv.2610.14986" target="_blank" rel="noopener noreferrer">Shen, Kumar, and Boyce, arXiv 2026</a>]. The storage modulus of every composition, at every temperature and frequency, <strong>collapses onto one master curve</strong>; the phase angle and the relaxation spectrum superpose in the same way, so the family shares one distribution of
 relaxation times. A single closed form then gives the <strong>stiffness and damping of the entire family across
-composition, temperature, and frequency</strong>. From large-deformation compression tests over three orders of magnitude
-in strain rate, I formulated a <strong>unified finite-strain viscoelastic&ndash;viscoplastic constitutive framework for the whole
+composition, temperature, and frequency</strong>. From large deformation compression tests over three orders of magnitude
+in strain rate, I formulated a <strong>unified finite strain viscoelastic&ndash;viscoplastic constitutive framework for the whole
 family</strong>
 based on the physical mechanisms of deformation, with material properties that vary with composition according to scaling laws,
-implemented it for finite-element analysis, and showed that it <strong>predicts the response of a composition withheld
-from calibration</strong> [<a href="https://doi.org/10.48550/arXiv.2609.04399" target="_blank" rel="noopener noreferrer">Shen and Boyce, arXiv 2026</a>]. A collaborative study applied data-driven discovery to the same materials
+implemented it for finite element analysis, and showed that it <strong>predicts the response of a composition not used
+in calibration</strong> [<a href="https://doi.org/10.48550/arXiv.2609.04399" target="_blank" rel="noopener noreferrer">Shen and Boyce, arXiv 2026</a>]. A collaborative study applied data-driven discovery to the same materials
 [<a href="https://doi.org/10.48550/arXiv.2609.04541" target="_blank" rel="noopener noreferrer">Garc&iacute;a-&Aacute;vila, Shen, et al., arXiv 2026</a>]. These mechanism-based formulations provide the first modules of the library and a
 basis for extending it to other polymer families.
 </p>
@@ -236,14 +236,14 @@ basis for extending it to other polymer families.
         <img src="images/research/ttce_concept.jpg" alt="Schematic of time-temperature-composition equivalence" loading="lazy">
         <figcaption><strong>Time&ndash;temperature&ndash;composition equivalence.</strong> Increasing the fraction of the
         stiff constituent moves the glass transition to higher temperature and lower frequency, broadens it, and increases the
-        rubbery plateau, so that temperature, frequency, and composition act on one glass transition across the printed
+        rubbery plateau, so that temperature, frequency, and composition act on one glass transition across the
         family [<a href="https://doi.org/10.48550/arXiv.2610.14986" target="_blank" rel="noopener noreferrer">Shen, Kumar, and Boyce, arXiv 2026</a>].</figcaption>
     </figure>
     <figure>
-        <img src="images/research/framework_prediction.jpg" alt="Predicted versus measured response of a withheld composition" loading="lazy">
-        <figcaption><strong>Prediction of a withheld composition.</strong> One finite-strain
+        <img src="images/research/framework_prediction.jpg" alt="Predicted versus measured response of a composition not used in calibration" loading="lazy">
+        <figcaption><strong>Predicting a new composition.</strong> One finite strain
         viscoelastic&ndash;viscoplastic model, with material properties that scale with composition, predicts the loading and
-        unloading response of a composition excluded from calibration, to a true strain above 1 and at strain rates from
+        unloading response of a composition not used in calibration, to a true strain above 1 and at strain rates from
         0.001 to 0.5 s<sup>&minus;1</sup> [<a href="https://doi.org/10.48550/arXiv.2609.04399" target="_blank" rel="noopener noreferrer">Shen and Boyce, arXiv 2026</a>].</figcaption>
     </figure>
 </div>
@@ -278,10 +278,10 @@ responses, but principles for designing material and structural time scales toge
 This direction designs the two sets of time scales together, so that the <strong>speed and sequence of the structural
 response</strong> to a load or to an environmental stimulus, such as heat, light, or moisture, can be prescribed. The work
 has two parts. The first establishes how geometry converts the relaxation of the material into the timing of structural
-events, such as the transfer of load between regions, the onset of buckling, and recovery, including delayed and partial recovery. The second uses multimaterial 3D
-printing to set the relaxation behavior region by region, with the constitutive models of the first direction relating
+events, such as the transfer of load between regions, the onset of buckling, and recovery, including delayed and partial recovery. The second uses multimaterial additive
+manufacturing to set the relaxation behavior region by region, with the constitutive models of the first direction relating
 composition to relaxation behavior, so that the material and the geometry of a structure are chosen together. Combining
-finite-element simulation, machine learning, and experiments, this direction aims at <strong>design principles
+finite element simulation, machine learning, and experiments, this direction aims at <strong>design principles
 that relate material and structural time scales</strong> and at computational design tools that translate a required response
 over time into the distribution of materials and the geometry of a structure.
 </p>
@@ -296,7 +296,7 @@ such as implants.
 <p>
 This direction builds primarily on my doctoral research on energy absorption in architected lattices made of liquid crystal
 elastomers, in which I coupled structural snap-through instabilities with the intrinsic dissipation mechanisms of the
-material, viscoelasticity and soft elasticity, and studied how to make the two act in synergy. My finite-element simulations
+material, viscoelasticity and soft elasticity, and studied how to make the two act in synergy. My finite element simulations
 showed that viscoelasticity makes stacked layers buckle nonuniformly, with viscous dissipation that grows with strain
 rate, the number of layers, and graded beam thickness, and that viscoelasticity and snap-through together make buckled
 layers <strong>recover locally and partially</strong>, further increasing energy absorption [<a href="https://doi.org/10.1002/adma.202200272" target="_blank" rel="noopener noreferrer">Jeon, Shen, et al., <i>Adv. Mater.</i> 2022</a>]. Building on this lattice design, I replaced the rigid horizontal member of the unit cell with a stretchable liquid crystal elastomer bar,
@@ -311,7 +311,7 @@ materials and structures.
 </p>
 <div class="figrow">
     <figure>
-        <img src="images/research/adma_sim.jpg" alt="Finite-element simulations of stacked liquid crystal elastomer layers" loading="lazy">
+        <img src="images/research/adma_sim.jpg" alt="Finite element simulations of stacked liquid crystal elastomer layers" loading="lazy">
         <figcaption><strong>Rate-dependent buckling sequence.</strong> Simulations of stacked liquid crystal elastomer
         layers show nonuniform buckling at a low strain rate, simultaneous buckling at a high strain rate, and sequential
         buckling when the beam thickness is graded. The graded design produces repeated force peaks, and the additional
@@ -375,15 +375,15 @@ polypropylene, using a calorimetry-based method that quantifies the type, fracti
 impurities. Combining calorimetry, electron microscopy, rheometry, tensile testing, and X-ray scattering, I showed that
 <strong>polyethylene domains drawn into elongated striations govern the anisotropic ductility</strong> of these films:
 the transverse elongation at break fell from about 1700% to 300% as the polyethylene content increased to 40%. Splitting and
-restacking the melt with a layer-multiplying element refined the striations, <strong>approximately doubled the
-transverse ductility</strong>, and restored the ductility of virgin material with the same polyethylene content [<a href="https://doi.org/10.1002/pen.70353" target="_blank" rel="noopener noreferrer">Shen et al., <i>Polym. Eng. Sci.</i> 2026</a>]. These results show that processing can improve a recycled polymer: how it is processed, and not only what it
+restacking the melt with a layer-multiplying element made the striations more uniform, <strong>roughly doubled the
+transverse elongation at break</strong> at 40% polyethylene, and gave films that performed comparably to virgin materials of similar polyethylene content [<a href="https://doi.org/10.1002/pen.70353" target="_blank" rel="noopener noreferrer">Shen et al., <i>Polym. Eng. Sci.</i> 2026</a>]. These results show that processing can improve a recycled polymer: how it is processed, and not only what it
 contains, determines its performance.
 </p>
 <figure class="wide">
     <img src="images/research/pes_ga.jpg" alt="Graphical abstract of the recycled polypropylene film study" loading="lazy">
     <figcaption><strong>Morphology governs ductility.</strong> In films extruded from recycled polypropylene,
-    polyethylene domains form elongated striations. A layer-multiplying element refines the striations and approximately
-    doubles the transverse ductility at high polyethylene content [<a href="https://doi.org/10.1002/pen.70353" target="_blank" rel="noopener noreferrer">Shen et al., <i>Polym. Eng. Sci.</i> 2026</a>].</figcaption>
+    polyethylene domains form elongated striations. A layer-multiplying element makes the striations more uniform and roughly
+    doubles the transverse elongation at break at 40% polyethylene [<a href="https://doi.org/10.1002/pen.70353" target="_blank" rel="noopener noreferrer">Shen et al., <i>Polym. Eng. Sci.</i> 2026</a>].</figcaption>
 </figure>
 <p class="rel-label">Relevant Publications</p>
 <ul class="rel">
@@ -392,7 +392,7 @@ contains, determines its performance.
 </ul>
 </section>
 
-<footer class="footer">Last updated: October 2026</footer>
+<footer class="footer">Last updated: November 2026</footer>
 </main>
 </div>
 
